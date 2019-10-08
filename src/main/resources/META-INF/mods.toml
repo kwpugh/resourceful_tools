@@ -1,0 +1,32 @@
+modLoader="javafml" #mandatory
+
+loaderVersion="[27,)" #mandatory (24 is current forge version)
+
+credits="Thanks to Harry Talks for his amazing tutorials and Udemy for great Java courses." #optional
+
+authors="kwpugh" #optional
+
+[[mods]] #mandatory
+modId="resourceful_tools" #mandatory
+version="1.0.1" #mandatory
+displayName="Resourceful Tools" #mandatory
+description='''
+A set of simple tools that allow you to obtain difficult to get resources
+'''
+
+
+[[dependencies.ring_of_miner]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[28,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+
+
+# Here's another dependency
+[[dependencies.ring_of_miner]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.14.3, 1.14.4]"
+    ordering="NONE"
+    side="BOTH"

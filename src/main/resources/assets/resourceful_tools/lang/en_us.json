@@ -1,0 +1,21 @@
+{
+	
+	"item.resourceful_tools.hand_tiller": "Hand Tiller",
+	"item.resourceful_tools.hand_pick": "Hand Pick",
+	"item.resourceful_tools.hand_scraper": "Hand Scraper",
+	"item.resourceful_tools.tree_trimmer": "Hand Trimmer",
+	
+	
+	"item.resourceful_tools.powder_sulfur": "Sulfur",
+	"item.resourceful_tools.powder_saltpeter": "Saltpeter",
+	
+	"item.resourceful_tools.bone_fragment": "Bone Fragment",
+	"item.resourceful_tools.pearl_fragment": "Pearl Fragment",
+	"item.resourceful_tools.small_blaze_powder": "Small Pile of Blaze Powder",
+	"item.resourceful_tools.nether_star_fragment": "Nether Star Fragment",
+	
+	"item.resourceful_tools.bamboo_sheet": "Bamboo Sheet",
+	"item.resourceful_tools.large_bamboo_sheet": "Large Bamboo Sheet",
+		
+	"itemGroup.resourceful_tools": "Resourceful Tools"
+}

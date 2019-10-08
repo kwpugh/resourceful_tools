@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "resourceful_tools:hand_scraper"
+        },
+        {
+            "item": "minecraft:bamboo"
+        }
+    ],
+    "result": {
+        "item": "resourceful_tools:bamboo_sheet",
+        "count": 1
+    }
+}
