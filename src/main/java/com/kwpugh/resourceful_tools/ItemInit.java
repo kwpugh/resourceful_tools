@@ -28,6 +28,8 @@ public class ItemInit
 					ItemList.pearl_fragment = new Item(new Item.Properties().group(ResourcefulTools.resourceful_tools)).setRegistryName(location("pearl_fragment")),
 					ItemList.small_blaze_powder = new Item(new Item.Properties().group(ResourcefulTools.resourceful_tools)).setRegistryName(location("small_blaze_powder")),
 					ItemList.nether_star_fragment = new Item(new Item.Properties().group(ResourcefulTools.resourceful_tools)).setRegistryName(location("nether_star_fragment")),
+					ItemList.ghast_tear_fragment = new Item(new Item.Properties().group(ResourcefulTools.resourceful_tools)).setRegistryName(location("ghast_tear_fragment")),
+					
 					ItemList.bamboo_sheet = new Item(new Item.Properties().group(ResourcefulTools.resourceful_tools)).setRegistryName(location("bamboo_sheet")),
 					ItemList.large_bamboo_sheet = new Item(new Item.Properties().group(ResourcefulTools.resourceful_tools)).setRegistryName(location("large_bamboo_sheet"))				
 			);		
