@@ -20,4 +20,5 @@ public class ItemList
 	public static Item small_blaze_powder;
 	public static Item nether_star_fragment;
 	public static Item ghast_tear_fragment;
+	
 }
