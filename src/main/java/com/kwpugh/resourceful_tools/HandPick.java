@@ -77,6 +77,23 @@ public class HandPick extends PickaxeItem
 		        	 //just drop the normal block, no drops
 		        }		
 			}
+
+			if(block == Blocks.NETHER_QUARTZ_ORE)
+			{
+		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+		         
+		        double r = random.nextDouble();
+		        if (r <= 0.2)
+		        {
+		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.ghast_tear_fragment, 1)));
+		        }
+		        else if (r > 0.2)
+		        {
+		        	 //just drop the normal block, no drops
+		        }		
+			}
 			
 			if(block == Blocks.END_STONE)
 			{
