@@ -8,7 +8,7 @@ authors="kwpugh" #optional
 
 [[mods]] #mandatory
 modId="resourceful_tools" #mandatory
-version="1.0.3" #mandatory
+version="1.0.4" #mandatory
 displayName="Resourceful Tools" #mandatory
 description='''
 A set of simple tools that allow you to obtain difficult to get resources
