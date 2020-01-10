@@ -1,10 +1,12 @@
 package com.kwpugh.resourceful_tools;
 
+import java.util.List;
 import java.util.Properties;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -14,6 +16,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
 public class HandTiller extends ShovelItem
@@ -63,9 +68,33 @@ public class HandTiller extends ShovelItem
 		        	 //just drop the normal block, no bone fragment
 		        }		
 			}
+			
+			if(!(block == Blocks.CLAY) || !(block == Blocks.GRAVEL))
+			{
+		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+
+		        double r = random.nextDouble();
+		        if (r <= 0.2)
+		        {
+		        	//Nothing happens
+		        }
+		        else if (r > 0.2)
+		        {
+		        	 //just drop the normal block, no bone fragment
+		        }		
+			}
 	    }
 
 		return true;
+	}
+	
+	@Override
+	public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
+	{
+		super.addInformation(stack, world, list, flag);				
+		list.add(new StringTextComponent(TextFormatting.GREEN + "Used to obtain resources from Clay and Gravel"));
 	}
 }
 

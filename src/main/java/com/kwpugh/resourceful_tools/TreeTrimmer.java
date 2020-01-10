@@ -193,6 +193,23 @@ public class TreeTrimmer extends ShovelItem
 	        }		
 		}
 		
+		if(!(block == Blocks.SPRUCE_LEAVES) || !(block == Blocks.BIRCH_LEAVES) || !(block == Blocks.OAK_LEAVES) || !(block == Blocks.ACACIA_LEAVES) || !(block == Blocks.JUNGLE_LEAVES) || !(block == Blocks.DARK_OAK_LEAVES) || !(block == Blocks.TALL_SEAGRASS) || !(block == Blocks.KELP_PLANT))
+		{
+	        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+	            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+	         });
+
+	        double r = random.nextDouble();
+	        if (r <= 0.2)
+	        {
+	        	//Nothing happens
+	        }
+	        else if (r > 0.2)
+	        {
+	        	 //just drop the normal block, no bone fragment
+	        }		
+		}
+		
 		return true;
 	} 
 	

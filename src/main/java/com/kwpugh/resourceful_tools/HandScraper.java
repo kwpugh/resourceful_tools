@@ -27,6 +27,8 @@ public class HandScraper extends Item
     @Override
     public ItemStack getContainerItem(ItemStack stack)
     {
+    	stack.setDamage(stack.getItem().getDamage(stack) + 1);
+
         return stack.copy();
     }
     
