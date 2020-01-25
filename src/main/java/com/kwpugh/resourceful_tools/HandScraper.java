@@ -3,6 +3,7 @@ package com.kwpugh.resourceful_tools;
 import java.util.List;
 
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.ITextComponent;
@@ -30,6 +31,36 @@ public class HandScraper extends Item
     	stack.setDamage(stack.getItem().getDamage(stack) + 1);
 
         return stack.copy();
+    }
+    
+    @Override
+    public int getItemEnchantability()
+    {
+    	return 0;
+    }
+
+    @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
+    {
+    	return false;
+    }
+
+    @Override
+    public boolean isDamageable()
+    {
+    	return true;
+    }
+
+    @Override
+    public boolean isBookEnchantable(ItemStack stack, ItemStack book)
+    {
+    	return false;
+    }
+
+    @Override
+    public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment)
+    {
+    	return false;
     }
     
 	@Override
