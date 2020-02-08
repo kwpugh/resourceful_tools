@@ -19,7 +19,7 @@ public class ItemInit
 			(				
 					ItemList.hand_tiller = new HandTiller(ItemTier.IRON, -2, -3, new Item.Properties().group(ResourcefulTools.resourceful_tools)).setRegistryName(location("hand_tiller")),	
 					ItemList.hand_pick = new HandPick(ItemTier.IRON, -2, -3, new Item.Properties().group(ResourcefulTools.resourceful_tools)).setRegistryName(location("hand_pick")),
-					ItemList.hand_scraper = new HandScraper(new Item.Properties().group(ResourcefulTools.resourceful_tools)).setRegistryName(location("hand_scraper")),
+					ItemList.hand_scraper = new HandScraper(new Item.Properties().maxDamage(128).group(ResourcefulTools.resourceful_tools)).setRegistryName(location("hand_scraper")),
 					ItemList.tree_trimmer = new TreeTrimmer(ItemTier.IRON, -2, -3, new Item.Properties().group(ResourcefulTools.resourceful_tools)).setRegistryName(location("tree_trimmer")),
 					
 					ItemList.powder_sulfur = new Item(new Item.Properties().group(ResourcefulTools.resourceful_tools)).setRegistryName(location("powder_sulfur")),

@@ -10,7 +10,6 @@ import net.minecraft.block.Blocks;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
@@ -36,7 +35,6 @@ public class HandTiller extends ShovelItem
 		double boneFragmentChance = ResourcefulToolsConfig.bone_fragment_chance.get();
 		double inkSacChance = ResourcefulToolsConfig.ink_sac_chance.get();
 		
-		PlayerEntity player = (PlayerEntity) entityLiving;
 		Block block = state.getBlock();
 		
 		if (!worldIn.isRemote && state.getBlockHardness(worldIn, pos) != 0.0F)
@@ -90,7 +88,7 @@ public class HandTiller extends ShovelItem
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
 		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.resourceful_tools.hand_tiller.line1").applyTextStyle(TextFormatting.BLUE)));
+		tooltip.add((new TranslationTextComponent("item.resourceful_tools.hand_tiller.line1").applyTextStyle(TextFormatting.GREEN)));
 	}
 }
 

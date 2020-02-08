@@ -219,6 +219,6 @@ public class TreeTrimmer extends ShovelItem
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
 		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.resourceful_tools.tree_trimmer.line1").applyTextStyle(TextFormatting.BLUE)));
+		tooltip.add((new TranslationTextComponent("item.resourceful_tools.tree_trimmer.line1").applyTextStyle(TextFormatting.GREEN)));
 	}
 }
