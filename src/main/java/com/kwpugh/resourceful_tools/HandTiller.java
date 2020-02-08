@@ -1,7 +1,8 @@
 package com.kwpugh.resourceful_tools;
 
 import java.util.List;
-import java.util.Properties;
+
+import javax.annotation.Nullable;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -17,9 +18,11 @@ import net.minecraft.item.Items;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class HandTiller extends ShovelItem
 {
@@ -30,6 +33,9 @@ public class HandTiller extends ShovelItem
 
 	public boolean onBlockDestroyed(ItemStack stack, World worldIn, BlockState state, BlockPos pos, LivingEntity entityLiving)
 	{
+		double boneFragmentChance = ResourcefulToolsConfig.bone_fragment_chance.get();
+		double inkSacChance = ResourcefulToolsConfig.ink_sac_chance.get();
+		
 		PlayerEntity player = (PlayerEntity) entityLiving;
 		Block block = state.getBlock();
 		
@@ -42,11 +48,11 @@ public class HandTiller extends ShovelItem
 		         });
 
 		        double r = random.nextDouble();
-		        if (r <= 0.2)
+		        if (r <= boneFragmentChance)
 		        {
 		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.bone_fragment, 1)));
 		        }
-		        else if (r > 0.2)
+		        else if (r > boneFragmentChance)
 		        {
 		        	 //just drop the normal block, no bone fragment
 		        }		
@@ -59,11 +65,11 @@ public class HandTiller extends ShovelItem
 		         });
 
 		        double r = random.nextDouble();
-		        if (r <= 0.2)
+		        if (r <= inkSacChance)
 		        {
 		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.INK_SAC, 1)));
 		        }
-		        else if (r > 0.2)
+		        else if (r > inkSacChance)
 		        {
 		        	 //just drop the normal block, no bone fragment
 		        }		
@@ -73,28 +79,18 @@ public class HandTiller extends ShovelItem
 			{
 		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
 		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
-		         });
-
-		        double r = random.nextDouble();
-		        if (r <= 0.2)
-		        {
-		        	//Nothing happens
-		        }
-		        else if (r > 0.2)
-		        {
-		        	 //just drop the normal block, no bone fragment
-		        }		
+		         });		
 			}
 	    }
 
 		return true;
 	}
-	
-	@Override
-	public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
+
+	@OnlyIn(Dist.CLIENT)
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
-		super.addInformation(stack, world, list, flag);				
-		list.add(new StringTextComponent(TextFormatting.GREEN + "Used to obtain resources from Clay and Gravel"));
+		super.addInformation(stack, worldIn, tooltip, flagIn);
+		tooltip.add((new TranslationTextComponent("item.resourceful_tools.hand_tiller.line1").applyTextStyle(TextFormatting.BLUE)));
 	}
 }
 

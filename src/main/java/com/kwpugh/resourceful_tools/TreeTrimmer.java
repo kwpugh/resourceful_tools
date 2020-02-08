@@ -2,13 +2,14 @@ package com.kwpugh.resourceful_tools;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
@@ -16,9 +17,11 @@ import net.minecraft.item.Items;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class TreeTrimmer extends ShovelItem
 {
@@ -30,7 +33,16 @@ public class TreeTrimmer extends ShovelItem
 
 	public boolean onBlockDestroyed(ItemStack stack, World worldIn, BlockState state, BlockPos pos, LivingEntity entityLiving)
 	{
-		PlayerEntity player = (PlayerEntity) entityLiving;
+		double featherChance = ResourcefulToolsConfig.feather_chance.get();
+		double stringChance = ResourcefulToolsConfig.string_chance.get();
+		double appleChance = ResourcefulToolsConfig.apple_chance.get();
+		double rabbitChance = ResourcefulToolsConfig.rabbit_chance.get();
+		double spiderEyeChance = ResourcefulToolsConfig.spider_eye_chance.get();
+		double pearlChance = ResourcefulToolsConfig.pearl_fragment_chance.get();
+		double crystalChance = ResourcefulToolsConfig.prismarine_crystal_chance.get();
+		double shardChance = ResourcefulToolsConfig.prismarine_shard_chance.get();
+		
+		
 		Block block = state.getBlock();
 		
 		if (!worldIn.isRemote)
@@ -43,11 +55,11 @@ public class TreeTrimmer extends ShovelItem
 		         
 		        
 		        double r = random.nextDouble();
-		        if (r <= 0.15)
+		        if (r <= featherChance)
 		        {
 		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.FEATHER, 1)));
 		        }
-		        else if (r > 0.15)
+		        else if (r > featherChance)
 		        {
 		        	 //just drop the normal block, no drops
 		        }		
@@ -64,11 +76,11 @@ public class TreeTrimmer extends ShovelItem
 		         
 		        
 		        double r = random.nextDouble();
-		        if (r <= 0.15)
+		        if (r <= stringChance)
 		        {
 		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.STRING, 1)));
 		        }
-		        else if (r > 0.15)
+		        else if (r > stringChance)
 		        {
 		        	 //just drop the normal block, no drops
 		        }		
@@ -85,11 +97,11 @@ public class TreeTrimmer extends ShovelItem
 		         
 		        
 		        double r = random.nextDouble();
-		        if (r <= 0.25)
+		        if (r <= appleChance)
 		        {
 		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.APPLE, 1)));
 		        }
-		        else if (r > 0.25)
+		        else if (r > appleChance)
 		        {
 		        	 //just drop the normal block, no drops
 		        }		
@@ -106,11 +118,11 @@ public class TreeTrimmer extends ShovelItem
 		         
 		        
 		        double r = random.nextDouble();
-		        if (r <= 0.05)
+		        if (r <= rabbitChance)
 		        {
 		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.RABBIT_FOOT, 1)));
 		        }
-		        else if (r > 0.05)
+		        else if (r > rabbitChance)
 		        {
 		        	 //just drop the normal block, no drops
 		        }		
@@ -127,11 +139,11 @@ public class TreeTrimmer extends ShovelItem
 		         
 		        
 		        double r = random.nextDouble();
-		        if (r <= 0.1)
+		        if (r <= spiderEyeChance)
 		        {
 		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.SPIDER_EYE, 1)));
 		        }
-		        else if (r > 0.1)
+		        else if (r > spiderEyeChance)
 		        {
 		        	 //just drop the normal block, no drops
 		        }		
@@ -148,11 +160,11 @@ public class TreeTrimmer extends ShovelItem
 		         
 		        
 		        double r = random.nextDouble();
-		        if (r <= 0.1)
+		        if (r <= pearlChance)
 		        {
 		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.pearl_fragment, 1)));
 		        }
-		        else if (r > 0.1)
+		        else if (r > pearlChance)
 		        {
 		        	 //just drop the normal block, no drops
 		        }		
@@ -166,11 +178,11 @@ public class TreeTrimmer extends ShovelItem
 	         });
 	         
 	        double r = random.nextDouble();
-	        if (r <= 0.05)
+	        if (r <= crystalChance)
 	        {
 	        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.PRISMARINE_CRYSTALS, 1)));
 	        }
-	        else if (r > 0.05)
+	        else if (r > crystalChance)
 	        {
 	        	 //just drop the normal block, no drops
 	        }		
@@ -183,11 +195,11 @@ public class TreeTrimmer extends ShovelItem
 	         });
 	         
 	        double r = random.nextDouble();
-	        if (r <= 0.05)
+	        if (r <= shardChance)
 	        {
 	        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.PRISMARINE_SHARD, 1)));
 	        }
-	        else if (r > 0.05)
+	        else if (r > shardChance)
 	        {
 	        	 //just drop the normal block, no drops
 	        }		
@@ -197,26 +209,16 @@ public class TreeTrimmer extends ShovelItem
 		{
 	        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
 	            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
-	         });
-
-	        double r = random.nextDouble();
-	        if (r <= 0.2)
-	        {
-	        	//Nothing happens
-	        }
-	        else if (r > 0.2)
-	        {
-	        	 //just drop the normal block, no bone fragment
-	        }		
+	         });	
 		}
 		
 		return true;
 	} 
-	
-	@Override
-	public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
+
+	@OnlyIn(Dist.CLIENT)
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
-		super.addInformation(stack, world, list, flag);				
-		list.add(new StringTextComponent(TextFormatting.GREEN + "Used to obtain resources from leaves"));
+		super.addInformation(stack, worldIn, tooltip, flagIn);
+		tooltip.add((new TranslationTextComponent("item.resourceful_tools.tree_trimmer.line1").applyTextStyle(TextFormatting.BLUE)));
 	}
 }

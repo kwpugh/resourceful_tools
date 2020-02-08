@@ -2,13 +2,13 @@ modLoader="javafml" #mandatory
 
 loaderVersion="[30,)" #mandatory (24 is current forge version)
 
-credits="Thanks to Harry Talks for his amazing tutorials and Udemy for great Java courses." #optional
+credits="Thanks to Udemy for great Java courses." #optional
 
 authors="kwpugh" #optional
 
 [[mods]] #mandatory
 modId="resourceful_tools" #mandatory
-version="1.1.11" #mandatory
+version="1.1.14" #mandatory
 displayName="Resourceful Tools" #mandatory
 description='''
 A set of simple tools that allow you to obtain difficult to get resources

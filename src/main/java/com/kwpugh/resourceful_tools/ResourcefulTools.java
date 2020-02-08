@@ -18,6 +18,7 @@ import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLPaths;
 
 @Mod("resourceful_tools")
 public class ResourcefulTools
@@ -29,19 +30,21 @@ public class ResourcefulTools
 
     public ResourcefulTools()
     {
-
+    	//ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.config);
+    	Config.loadConfig(Config.config, FMLPaths.CONFIGDIR.get().resolve("resourceful_tools.toml").toString());
+    	
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
-
+        
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void setup(final FMLCommonSetupEvent event)
     {
 
-        logger.info("Mod preinit");
+        logger.info("ResourcefulTools preinit");
     }
 
     private void doClientStuff(final FMLClientSetupEvent event)
@@ -68,7 +71,7 @@ public class ResourcefulTools
     public void onServerStarting(FMLServerStartingEvent event)
     {
 
-    	logger.info("Mod server starting");
+    	logger.info("ResourcefulTools starting");
     }
 
     @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
@@ -78,7 +81,7 @@ public class ResourcefulTools
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent)
         {
 
-        	logger.info("Blocks registered");
+        	logger.info("ResourcefulTools blocks registered");
         }
     }
 }

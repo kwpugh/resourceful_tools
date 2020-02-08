@@ -2,14 +2,18 @@ package com.kwpugh.resourceful_tools;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class HandScraper extends Item
 {
@@ -22,17 +26,20 @@ public class HandScraper extends Item
     @Override
     public boolean hasContainerItem(ItemStack stack)
     {
+    	System.out.println("has container");
         return true;
     }
 
     @Override
-    public ItemStack getContainerItem(ItemStack stack)
+    public ItemStack getContainerItem(ItemStack stackIn)
     {
-    	stack.setDamage(stack.getItem().getDamage(stack) + 1);
-
-        return stack.copy();
+    	ItemStack stack = stackIn.copy();
+    	stack.setDamage(getDamage(stack) + 1);
+    	System.out.println("get container");
+        return stack;
     }
     
+	
     @Override
     public int getItemEnchantability()
     {
@@ -62,13 +69,12 @@ public class HandScraper extends Item
     {
     	return false;
     }
-    
-	@Override
-	public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
+	
+	@OnlyIn(Dist.CLIENT)
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
-		super.addInformation(stack, world, list, flag);				
-		list.add(new StringTextComponent(TextFormatting.GREEN + "Used on Bamboo to make sheets"));
-		list.add(new StringTextComponent(TextFormatting.BLUE + "Use in a crafting table"));
-
-	} 
+		super.addInformation(stack, worldIn, tooltip, flagIn);
+		tooltip.add((new TranslationTextComponent("item.resourceful_tools.hand_scrapper.line1").applyTextStyle(TextFormatting.BLUE)));
+		tooltip.add((new TranslationTextComponent("item.resourceful_tools.hand_scrapper.line2").applyTextStyle(TextFormatting.GREEN)));
+	}
 }
