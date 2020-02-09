@@ -30,8 +30,9 @@ public class ResourcefulTools
 
     public ResourcefulTools()
     {
-    	//ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.config);
     	Config.loadConfig(Config.config, FMLPaths.CONFIGDIR.get().resolve("resourceful_tools.toml").toString());
+    	
+    	ItemInit.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     	
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);

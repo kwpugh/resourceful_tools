@@ -9,10 +9,10 @@ public class GroupResourcefullTools extends ItemGroup
 	{
 		super("resourceful_tools");
 	}
-
+	
 	@Override
 	public ItemStack createIcon() 
 	{
-		return new ItemStack(ItemList.hand_tiller);
+		return new ItemStack(ItemInit.HAND_TILLER.get());
 	}	
 }

@@ -50,7 +50,7 @@ public class HandPick extends PickaxeItem
 		        double r = random.nextDouble();
 		        if (r <= saltPeterChance)
 		        {
-		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_saltpeter, 1)));
+		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_SALTPETER.get(), 1)));
 		        }
 		        else if (r > saltPeterChance)
 		        {
@@ -67,7 +67,7 @@ public class HandPick extends PickaxeItem
 		        double r = random.nextDouble();
 		        if (r <= sulfurChance)
 		        {
-		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.powder_sulfur, 1)));
+		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_SULFUR.get(), 1)));
 		        }
 		        else if (r > sulfurChance)
 		        {
@@ -84,7 +84,7 @@ public class HandPick extends PickaxeItem
 		        double r = random.nextDouble();
 		        if (r <= smallBlazeChance)
 		        {
-		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.small_blaze_powder, 1)));
+		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.SMALL_BLAZE_POWDER.get(), 1)));
 		        }
 		        else if (r > smallBlazeChance)
 		        {
@@ -101,7 +101,7 @@ public class HandPick extends PickaxeItem
 		        double r = random.nextDouble();
 		        if (r <= ghastTearChance)
 		        {
-		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.ghast_tear_fragment, 1)));
+		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.GHAST_TEAR_FRAGMENT.get(), 1)));
 		        }
 		        else if (r > ghastTearChance)
 		        {
@@ -118,7 +118,7 @@ public class HandPick extends PickaxeItem
 		        double r = random.nextDouble();
 		        if (r <= netherStarChance)
 		        {
-		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.nether_star_fragment, 1)));
+		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.NETHER_STAR_FRAGMENT.get(), 1)));
 		        }
 		        else if (r > netherStarChance)
 		        {

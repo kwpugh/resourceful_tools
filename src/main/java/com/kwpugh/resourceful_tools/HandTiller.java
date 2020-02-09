@@ -48,7 +48,7 @@ public class HandTiller extends ShovelItem
 		        double r = random.nextDouble();
 		        if (r <= boneFragmentChance)
 		        {
-		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.bone_fragment, 1)));
+		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.BONE_FRAGMENT.get(), 1)));
 		        }
 		        else if (r > boneFragmentChance)
 		        {

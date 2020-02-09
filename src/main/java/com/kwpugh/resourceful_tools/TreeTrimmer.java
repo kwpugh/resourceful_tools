@@ -162,7 +162,7 @@ public class TreeTrimmer extends ShovelItem
 		        double r = random.nextDouble();
 		        if (r <= pearlChance)
 		        {
-		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.pearl_fragment, 1)));
+		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.PEARL_FRAGMENT.get(), 1)));
 		        }
 		        else if (r > pearlChance)
 		        {
