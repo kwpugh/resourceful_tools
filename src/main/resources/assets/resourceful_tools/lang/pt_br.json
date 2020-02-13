@@ -1,0 +1,29 @@
+{
+	"item.resourceful_tools.hand_tiller": "Rastelo",
+	"item.resourceful_tools.hand_tiller.line1":"Usado em Argila e Cascalho, para obter recursos",
+	
+	"item.resourceful_tools.hand_pick": "Mine Picareta",
+	"item.resourceful_tools.hand_pick.line1":"Usado em várias pedras para obter recursos",
+	
+	"item.resourceful_tools.hand_scraper": "Espatula de Raspagem",
+	"item.resourceful_tools.hand_scrapper.line1":"Usado no bambu para fazer folhas",
+	"item.resourceful_tools.hand_scrapper.line2":"Use em uma Bancada de Trabalho",
+	
+	"item.resourceful_tools.tree_trimmer": "Podão",
+	"item.resourceful_tools.tree_trimmer.line1": "Usado em folhagens para obter recursos",
+	
+	
+	"item.resourceful_tools.powder_sulfur": "Enxofre",
+	"item.resourceful_tools.powder_saltpeter": "Salitre",
+	
+	"item.resourceful_tools.bone_fragment": "Fragmento de Osso",
+	"item.resourceful_tools.pearl_fragment": "Fragmento de Pérola",
+	"item.resourceful_tools.small_blaze_powder": "Punhado de Pó de Blaze",
+	"item.resourceful_tools.nether_star_fragment": "Fragmento de Estrela do Nether",
+	"item.resourceful_tools.ghast_tear_fragment": "Fragmento de Lágrima de Ghast",
+	
+	"item.resourceful_tools.bamboo_sheet": "Folha de Bambu",
+	"item.resourceful_tools.large_bamboo_sheet": "Folha Grande de Bambu",
+		
+	"itemGroup.resourceful_tools": "Resourceful Tools (Ferramentas de Recursos)"
+}
