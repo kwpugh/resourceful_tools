@@ -1,4 +1,4 @@
-package com.kwpugh.resourceful_tools;
+package com.kwpugh.resourceful_tools.items;
 
 import java.util.List;
 

@@ -1,5 +1,7 @@
 package com.kwpugh.resourceful_tools;
 
+import com.kwpugh.resourceful_tools.init.ItemInit;
+
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 

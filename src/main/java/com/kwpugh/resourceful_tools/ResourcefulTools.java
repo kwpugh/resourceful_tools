@@ -5,6 +5,10 @@ import java.util.stream.Collectors;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.kwpugh.resourceful_tools.config.Config;
+import com.kwpugh.resourceful_tools.init.BlockInit;
+import com.kwpugh.resourceful_tools.init.ItemInit;
+
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

@@ -1,4 +1,10 @@
-package com.kwpugh.resourceful_tools;
+package com.kwpugh.resourceful_tools.init;
+
+import com.kwpugh.resourceful_tools.ResourcefulTools;
+import com.kwpugh.resourceful_tools.items.HandPick;
+import com.kwpugh.resourceful_tools.items.HandScraper;
+import com.kwpugh.resourceful_tools.items.HandTiller;
+import com.kwpugh.resourceful_tools.items.TreeTrimmer;
 
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;

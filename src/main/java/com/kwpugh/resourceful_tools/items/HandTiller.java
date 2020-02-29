@@ -1,8 +1,11 @@
-package com.kwpugh.resourceful_tools;
+package com.kwpugh.resourceful_tools.items;
 
 import java.util.List;
 
 import javax.annotation.Nullable;
+
+import com.kwpugh.resourceful_tools.config.ResourcefulToolsConfig;
+import com.kwpugh.resourceful_tools.init.ItemInit;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

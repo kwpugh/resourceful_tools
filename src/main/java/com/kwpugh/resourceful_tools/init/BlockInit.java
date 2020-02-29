@@ -1,4 +1,8 @@
-package com.kwpugh.resourceful_tools;
+package com.kwpugh.resourceful_tools.init;
+
+import com.kwpugh.resourceful_tools.ResourcefulTools;
+import com.kwpugh.resourceful_tools.blocks.Lavaspring;
+import com.kwpugh.resourceful_tools.blocks.Wellspring;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
