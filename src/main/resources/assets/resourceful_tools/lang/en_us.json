@@ -2,7 +2,7 @@
 	"item.resourceful_tools.hand_tiller": "Hand Tiller",
 	"item.resourceful_tools.hand_tiller.line1":"Used to obtain resources from Clay and Gravel",
 	"item.resourceful_tools.hand_pick": "Hand Pick",
-	"item.resourceful_tools.hand_pick.line1":"Used to obtain resources from several stones",
+	"item.resourceful_tools.hand_pick.line1":"Used to obtain resources from several types of stones",
 	"item.resourceful_tools.hand_scraper": "Hand Scraper",
 	"item.resourceful_tools.hand_scrapper.line1":"Used on Bamboo to make sheets",
 	"item.resourceful_tools.hand_scrapper.line2":"Use in a crafting table",
@@ -21,6 +21,13 @@
 	
 	"item.resourceful_tools.bamboo_sheet": "Bamboo Sheet",
 	"item.resourceful_tools.large_bamboo_sheet": "Large Bamboo Sheet",
+	
+	"item.resourceful_tools.springs.general.line1": "Right-click on block with empty bucket"	
+	"block.resourceful_tools.wellspring": "Wellspring",
+	"item.resourceful_tools.wellspring": "Wellspring",
+
+	"block.resourceful_tools.lavaspring": "Lavaspring",
+	"item.resourceful_tools.lavaspring": "Lavaspring",
 		
 	"itemGroup.resourceful_tools": "Resourceful Tools"
 }

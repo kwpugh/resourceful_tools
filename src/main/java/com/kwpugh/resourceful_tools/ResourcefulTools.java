@@ -5,10 +5,8 @@ import java.util.stream.Collectors;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import net.minecraft.block.Block;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
@@ -32,6 +30,7 @@ public class ResourcefulTools
     {
     	Config.loadConfig(Config.config, FMLPaths.CONFIGDIR.get().resolve("resourceful_tools.toml").toString());
     	
+    	BlockInit.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
     	ItemInit.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     	
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -45,13 +44,13 @@ public class ResourcefulTools
     private void setup(final FMLCommonSetupEvent event)
     {
 
-        logger.info("ResourcefulTools preinit");
+        logger.info("ResourcefulTools setup");
     }
 
     private void doClientStuff(final FMLClientSetupEvent event)
     {
 
-    	logger.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
+    	logger.info("ResourcefulTools game settings {}", event.getMinecraftSupplier().get().gameSettings);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
@@ -63,7 +62,7 @@ public class ResourcefulTools
     private void processIMC(final InterModProcessEvent event)
     {
 
-    	logger.info("Got IMC {}", event.getIMCStream().
+    	logger.info("ResourcefulTools IMC {}", event.getIMCStream().
                 map(m->m.getMessageSupplier().get()).
                 collect(Collectors.toList()));
     }
@@ -75,14 +74,14 @@ public class ResourcefulTools
     	logger.info("ResourcefulTools starting");
     }
 
-    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
-    public static class RegistryEvents
-    {
-        @SubscribeEvent
-        public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent)
-        {
-
-        	logger.info("ResourcefulTools blocks registered");
-        }
-    }
+//    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
+//    public static class RegistryEvents
+//    {
+//        @SubscribeEvent
+//        public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent)
+//        {
+//
+//        	logger.info("ResourcefulTools blocks registered");
+//        }
+//    }
 }
