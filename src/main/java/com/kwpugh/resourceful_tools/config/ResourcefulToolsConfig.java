@@ -21,14 +21,11 @@ public class ResourcefulToolsConfig
 	public static ForgeConfigSpec.DoubleValue prismarine_crystal_chance;
 	public static ForgeConfigSpec.DoubleValue prismarine_shard_chance;
 
-	
 	public static ForgeConfigSpec.Builder server_output;
 	
 	
 	public static void init(ForgeConfigSpec.Builder server)
 	{	
-		server_output = server.comment("Resource Drop Chances % as decimal");
-		
 		bone_fragment_chance = server
 				.comment("Chance to drop bone fragment from Gravel with Hand Tiller")
 				.defineInRange("bone_fragment_chance", 0.20, 0.0, 1.0);
@@ -83,10 +80,10 @@ public class ResourcefulToolsConfig
 	
 		prismarine_crystal_chance = server
 				.comment("Chance to drop prismarine crystal from Tall Seagrass with Hand Trimmer")
-				.defineInRange("prismarine_crystal_chance", 0.05, 0.0, 1.0);
+				.defineInRange("prismarine_crystal_chance", 0.15, 0.0, 1.0);
 		
 		prismarine_shard_chance = server
 				.comment("Chance to drop prismarine shard from Kelp Plant with Hand Trimmer")
-				.defineInRange("prismarine_shard_chance", 0.05, 0.0, 1.0);
+				.defineInRange("prismarine_shard_chance", 0.15, 0.0, 1.0);
 	}
 }

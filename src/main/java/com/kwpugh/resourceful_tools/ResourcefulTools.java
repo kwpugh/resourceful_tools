@@ -25,7 +25,6 @@ import net.minecraftforge.fml.loading.FMLPaths;
 @Mod("resourceful_tools")
 public class ResourcefulTools
 {
-
 	public static final String modid = "resourceful_tools";
 	public static final Logger logger = LogManager.getLogger(modid);	
 	public static final ItemGroup resourceful_tools = new GroupResourcefullTools();
@@ -74,18 +73,6 @@ public class ResourcefulTools
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event)
     {
-
     	logger.info("ResourcefulTools starting");
     }
-
-//    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
-//    public static class RegistryEvents
-//    {
-//        @SubscribeEvent
-//        public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent)
-//        {
-//
-//        	logger.info("ResourcefulTools blocks registered");
-//        }
-//    }
 }

@@ -42,12 +42,14 @@ public class Lavaspring extends Block
 		   if (itemstack.isEmpty())
 	       {
 	           player.setHeldItem(handIn, itemstack1);
+	           
 	           return ActionResultType.SUCCESS;
 	       }
 	       else if (!player.inventory.addItemStackToInventory(itemstack1))
 	       {
-	            player.dropItem(itemstack1, false);
-	            return ActionResultType.SUCCESS;
+	           player.dropItem(itemstack1, false);
+	            
+	           return ActionResultType.SUCCESS;
 	       } 
 	   }
 	   return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
@@ -57,6 +59,7 @@ public class Lavaspring extends Block
 	public void addInformation(ItemStack stack, @Nullable IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
 		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.resourceful_tools.springs.general.line1").applyTextStyle(TextFormatting.GREEN)));
+		tooltip.add((new TranslationTextComponent("item.resourceful_tools.lavaspring.line1").applyTextStyle(TextFormatting.GREEN)));
+		tooltip.add((new TranslationTextComponent("item.resourceful_tools.springs.general.line1").applyTextStyle(TextFormatting.YELLOW)));
 	}
 }

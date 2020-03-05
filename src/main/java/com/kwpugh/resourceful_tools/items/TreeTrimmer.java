@@ -55,164 +55,112 @@ public class TreeTrimmer extends ShovelItem
 		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
 		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
 		         });
-		         
-		        
+		         	        
 		        double r = random.nextDouble();
 		        if (r <= featherChance)
 		        {
 		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.FEATHER, 1)));
-		        }
-		        else if (r > featherChance)
-		        {
-		        	 //just drop the normal block, no drops
 		        }		
 			}	
-	    }
-
-		if (!worldIn.isRemote)
-		{
-			if(block == Blocks.BIRCH_LEAVES)
+			else if(block == Blocks.BIRCH_LEAVES)
 			{
 		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
 		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
 		         });
-		         
-		        
+		         	        
 		        double r = random.nextDouble();
 		        if (r <= stringChance)
 		        {
 		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.STRING, 1)));
-		        }
-		        else if (r > stringChance)
-		        {
-		        	 //just drop the normal block, no drops
-		        }		
+		        }			
 			}	
-	    }
-		
-		if (!worldIn.isRemote)
-		{
-			if(block == Blocks.OAK_LEAVES)
+			else if(block == Blocks.OAK_LEAVES)
 			{
 		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
 		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
 		         });
-		         
-		        
+		         		        
 		        double r = random.nextDouble();
 		        if (r <= appleChance)
 		        {
 		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.APPLE, 1)));
-		        }
-		        else if (r > appleChance)
-		        {
-		        	 //just drop the normal block, no drops
-		        }		
+		        }			
 			}	
-	    }
-		
-		if (!worldIn.isRemote)
-		{
-			if(block == Blocks.ACACIA_LEAVES)
+			else if(block == Blocks.ACACIA_LEAVES)
 			{
 		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
 		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
 		         });
-		         
-		        
+		         		        
 		        double r = random.nextDouble();
 		        if (r <= rabbitChance)
 		        {
 		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.RABBIT_FOOT, 1)));
-		        }
-		        else if (r > rabbitChance)
-		        {
-		        	 //just drop the normal block, no drops
-		        }		
+		        }			
 			}	
-	    }
-
-		if (!worldIn.isRemote)
-		{
-			if(block == Blocks.JUNGLE_LEAVES)
+			else if(block == Blocks.JUNGLE_LEAVES)
 			{
 		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
 		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
 		         });
-		         
-		        
+		         		        
 		        double r = random.nextDouble();
 		        if (r <= spiderEyeChance)
 		        {
 		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.SPIDER_EYE, 1)));
-		        }
-		        else if (r > spiderEyeChance)
-		        {
-		        	 //just drop the normal block, no drops
-		        }		
+		        }			
 			}	
-	    }
-		
-		if (!worldIn.isRemote)
-		{
-			if(block == Blocks.DARK_OAK_LEAVES)
+			else if(block == Blocks.DARK_OAK_LEAVES)
+			{
+		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+		         	        
+		        double r = random.nextDouble();
+		        if (r <= pearlChance)
+		        {
+		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.PEARL_FRAGMENT.get(), 1)));
+		        }			
+			}	
+			else if(block == Blocks.TALL_SEAGRASS)
+			{
+				stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+					p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+				});
+	         
+		        double r = random.nextDouble();
+		        if (r <= crystalChance)
+		        {
+		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.PRISMARINE_CRYSTALS, 1)));
+		        } 	
+			}		
+			else if(block == Blocks.KELP_PLANT)
 			{
 		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
 		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
 		         });
 		         
-		        
 		        double r = random.nextDouble();
-		        if (r <= pearlChance)
+		        if (r <= shardChance)
 		        {
-		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.PEARL_FRAGMENT.get(), 1)));
+		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.PRISMARINE_SHARD, 1)));
 		        }
-		        else if (r > pearlChance)
-		        {
-		        	 //just drop the normal block, no drops
-		        }		
-			}	
-	    }
+			
+			}
 		
-		if(block == Blocks.TALL_SEAGRASS)
-		{
-	        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
-	            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
-	         });
-	         
-	        double r = random.nextDouble();
-	        if (r <= crystalChance)
-	        {
-	        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.PRISMARINE_CRYSTALS, 1)));
-	        }
-	        else if (r > crystalChance)
-	        {
-	        	 //just drop the normal block, no drops
-	        }		
-		}
-		
-		if(block == Blocks.KELP_PLANT)
-		{
-	        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
-	            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
-	         });
-	         
-	        double r = random.nextDouble();
-	        if (r <= shardChance)
-	        {
-	        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.PRISMARINE_SHARD, 1)));
-	        }
-	        else if (r > shardChance)
-	        {
-	        	 //just drop the normal block, no drops
-	        }		
-		}
-		
-		if(!(block == Blocks.SPRUCE_LEAVES) || !(block == Blocks.BIRCH_LEAVES) || !(block == Blocks.OAK_LEAVES) || !(block == Blocks.ACACIA_LEAVES) || !(block == Blocks.JUNGLE_LEAVES) || !(block == Blocks.DARK_OAK_LEAVES) || !(block == Blocks.TALL_SEAGRASS) || !(block == Blocks.KELP_PLANT))
-		{
-	        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
-	            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
-	         });	
+			if(!(block == Blocks.SPRUCE_LEAVES) || 
+					!(block == Blocks.BIRCH_LEAVES) || 
+					!(block == Blocks.OAK_LEAVES) || 
+					!(block == Blocks.ACACIA_LEAVES) || 
+					!(block == Blocks.JUNGLE_LEAVES) || 
+					!(block == Blocks.DARK_OAK_LEAVES) || 
+					!(block == Blocks.TALL_SEAGRASS) || 
+					!(block == Blocks.KELP_PLANT))
+			{
+		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });	
+			}
 		}
 		
 		return true;

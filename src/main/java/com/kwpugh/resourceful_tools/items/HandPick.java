@@ -42,7 +42,7 @@ public class HandPick extends PickaxeItem
 
 		Block block = state.getBlock();
 		
-		if (!worldIn.isRemote && state.getBlockHardness(worldIn, pos) != 0.0F)
+		if (!worldIn.isRemote)
 		{
 			if(block == Blocks.SANDSTONE)
 			{
@@ -54,14 +54,9 @@ public class HandPick extends PickaxeItem
 		        if (r <= saltPeterChance)
 		        {
 		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_SALTPETER.get(), 1)));
-		        }
-		        else if (r > saltPeterChance)
-		        {
-		        	 //just drop the normal block, no drops
 		        }		
-			}
-			
-			if(block == Blocks.NETHERRACK)
+			}			
+			else if(block == Blocks.NETHERRACK)
 			{
 		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
 		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
@@ -71,14 +66,9 @@ public class HandPick extends PickaxeItem
 		        if (r <= sulfurChance)
 		        {
 		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.POWDER_SULFUR.get(), 1)));
-		        }
-		        else if (r > sulfurChance)
-		        {
-		        	 //just drop the normal block, no drops
 		        }		
-			}
-			
-			if(block == Blocks.MAGMA_BLOCK)
+			}		
+			else if(block == Blocks.MAGMA_BLOCK)
 			{
 		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
 		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
@@ -88,14 +78,9 @@ public class HandPick extends PickaxeItem
 		        if (r <= smallBlazeChance)
 		        {
 		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.SMALL_BLAZE_POWDER.get(), 1)));
-		        }
-		        else if (r > smallBlazeChance)
-		        {
-		        	 //just drop the normal block, no drops
-		        }		
+		        }	
 			}
-
-			if(block == Blocks.NETHER_QUARTZ_ORE)
+			else if(block == Blocks.NETHER_QUARTZ_ORE)
 			{
 		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
 		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
@@ -105,14 +90,9 @@ public class HandPick extends PickaxeItem
 		        if (r <= ghastTearChance)
 		        {
 		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.GHAST_TEAR_FRAGMENT.get(), 1)));
-		        }
-		        else if (r > ghastTearChance)
-		        {
-		        	 //just drop the normal block, no drops
 		        }		
 			}
-			
-			if(block == Blocks.END_STONE)
+			else if(block == Blocks.END_STONE)
 			{
 		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
 		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
@@ -122,14 +102,14 @@ public class HandPick extends PickaxeItem
 		        if (r <= netherStarChance)
 		        {
 		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.NETHER_STAR_FRAGMENT.get(), 1)));
-		        }
-		        else if (r > netherStarChance)
-		        {
-		        	 //just drop the normal block, no drops
 		        }		
 			}
 			
-			if(!(block == Blocks.SANDSTONE) || !(block == Blocks.NETHERRACK) || !(block == Blocks.MAGMA_BLOCK) || !(block == Blocks.NETHER_QUARTZ_ORE) || !(block == Blocks.END_STONE))
+			if(!(block == Blocks.SANDSTONE) || 
+					!(block == Blocks.NETHERRACK) || 
+					!(block == Blocks.MAGMA_BLOCK) || 
+					!(block == Blocks.NETHER_QUARTZ_ORE) || 
+					!(block == Blocks.END_STONE))
 			{
 		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
 		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);

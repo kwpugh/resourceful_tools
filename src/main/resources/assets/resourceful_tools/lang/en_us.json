@@ -7,7 +7,7 @@
 	"item.resourceful_tools.hand_scrapper.line1":"Used on Bamboo to make sheets",
 	"item.resourceful_tools.hand_scrapper.line2":"Use in a crafting table",
 	"item.resourceful_tools.tree_trimmer": "Hand Trimmer",
-	"item.resourceful_tools.tree_trimmer.line1": "Used to obtain resources from leaves",
+	"item.resourceful_tools.tree_trimmer.line1": "Used to obtain resources from leaves and sea plants",
 	
 	
 	"item.resourceful_tools.powder_sulfur": "Sulfur",
@@ -22,12 +22,14 @@
 	"item.resourceful_tools.bamboo_sheet": "Bamboo Sheet",
 	"item.resourceful_tools.large_bamboo_sheet": "Large Bamboo Sheet",
 	
-	"item.resourceful_tools.springs.general.line1": "Right-click on block with empty bucket"	
-	"block.resourceful_tools.wellspring": "Wellspring",
-	"item.resourceful_tools.wellspring": "Wellspring",
+	"item.resourceful_tools.springs.general.line1": "Right-click on block with empty bucket",	
+	"block.resourceful_tools.wellspring": "Well Spring",
+	"item.resourceful_tools.wellspring": "Well Spring",
+	"item.resourceful_tools.wellspring.line1": "An endless source of fresh, clean water",
 
-	"block.resourceful_tools.lavaspring": "Lavaspring",
-	"item.resourceful_tools.lavaspring": "Lavaspring",
+	"block.resourceful_tools.lavaspring": "Lava Spring",
+	"item.resourceful_tools.lavaspring": "Lava Spring",
+	"item.resourceful_tools.lavaspring.line1": "An endless source of piping hot lava",
 		
 	"itemGroup.resourceful_tools": "Resourceful Tools"
 }

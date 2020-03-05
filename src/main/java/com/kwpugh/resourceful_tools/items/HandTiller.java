@@ -40,7 +40,7 @@ public class HandTiller extends ShovelItem
 		
 		Block block = state.getBlock();
 		
-		if (!worldIn.isRemote && state.getBlockHardness(worldIn, pos) != 0.0F)
+		if (!worldIn.isRemote)
 		{
 			if(block == Blocks.GRAVEL)
 			{
@@ -52,14 +52,9 @@ public class HandTiller extends ShovelItem
 		        if (r <= boneFragmentChance)
 		        {
 		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.BONE_FRAGMENT.get(), 1)));
-		        }
-		        else if (r > boneFragmentChance)
-		        {
-		        	 //just drop the normal block, no bone fragment
-		        }		
+		        }	
 			}
-			
-			if(block == Blocks.CLAY)
+			else if(block == Blocks.CLAY)
 			{
 		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
 		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
@@ -70,10 +65,6 @@ public class HandTiller extends ShovelItem
 		        {
 		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.INK_SAC, 1)));
 		        }
-		        else if (r > inkSacChance)
-		        {
-		        	 //just drop the normal block, no bone fragment
-		        }		
 			}
 			
 			if(!(block == Blocks.CLAY) || !(block == Blocks.GRAVEL))
