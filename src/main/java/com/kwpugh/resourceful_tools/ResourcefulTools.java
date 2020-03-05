@@ -29,6 +29,7 @@ public class ResourcefulTools
 	public static final Logger logger = LogManager.getLogger(modid);	
 	public static final ItemGroup resourceful_tools = new GroupResourcefullTools();
 
+	
     public ResourcefulTools()
     {
     	Config.loadConfig(Config.config, FMLPaths.CONFIGDIR.get().resolve("resourceful_tools.toml").toString());
