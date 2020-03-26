@@ -33,6 +33,8 @@ public class ItemInit
 	public static final RegistryObject<Item> BAMBOO_SHEET = ITEMS.register("bamboo_sheet", () -> new Item(new Item.Properties().group(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> LARGE_BAMBOO_SHEET = ITEMS.register("large_bamboo_sheet", () -> new Item(new Item.Properties().group(ResourcefulTools.resourceful_tools)));
 	
+	public static final RegistryObject<Item> REAM_OF_PAPER = ITEMS.register("ream_of_paper", () -> new Item(new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	
 	public static final RegistryObject<Item> WELLSPRING = ITEMS.register("wellspring", () -> new BlockItem(BlockInit.WELLSPRING.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> LAVASPRING = ITEMS.register("lavaspring", () -> new BlockItem(BlockInit.LAVASPRING.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
 }

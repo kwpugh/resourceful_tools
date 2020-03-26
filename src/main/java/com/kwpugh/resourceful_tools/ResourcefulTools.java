@@ -47,13 +47,13 @@ public class ResourcefulTools
     private void setup(final FMLCommonSetupEvent event)
     {
 
-        logger.info("ResourcefulTools setup");
+        logger.info("ResourcefulTools common setup");
     }
 
     private void doClientStuff(final FMLClientSetupEvent event)
     {
 
-    	logger.info("ResourcefulTools game settings {}", event.getMinecraftSupplier().get().gameSettings);
+    	logger.info("ResourcefulTools client settings {}", event.getMinecraftSupplier().get().gameSettings);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
@@ -65,7 +65,7 @@ public class ResourcefulTools
     private void processIMC(final InterModProcessEvent event)
     {
 
-    	logger.info("ResourcefulTools IMC {}", event.getIMCStream().
+    	logger.info("ResourcefulTools IMC", event.getIMCStream().
                 map(m->m.getMessageSupplier().get()).
                 collect(Collectors.toList()));
     }
@@ -73,6 +73,6 @@ public class ResourcefulTools
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event)
     {
-    	logger.info("ResourcefulTools starting");
+    	logger.info("ResourcefulTools server starting");
     }
 }

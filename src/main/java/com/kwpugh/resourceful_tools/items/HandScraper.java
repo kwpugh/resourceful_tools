@@ -29,12 +29,17 @@ public class HandScraper extends Item
 
     @Override
     public ItemStack getContainerItem(ItemStack stackIn)
-    {
+    {	
     	ItemStack stack = stackIn.copy();
     	stack.setDamage(getDamage(stack) + 1);
 
+    	if(stack.getDamage() >= stack.getMaxDamage())
+    	{
+    		stack.shrink(1);
+    	}
+    	
         return stack;
-    }
+    }	
 	
 	@OnlyIn(Dist.CLIENT)
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
