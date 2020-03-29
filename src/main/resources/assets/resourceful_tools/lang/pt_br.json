@@ -1,7 +1,11 @@
 {
 	"item.resourceful_tools.hand_tiller": "Rastelo",
 	"item.resourceful_tools.hand_tiller.line1":"Usado em Argila e Cascalho, para obter recursos",
-	
+
+	"item.resourceful_tools.hook_knife": "Hook Knife",
+	"item.resourceful_tools.hook_knife.line1": "Used to get string from Sheep without harming",
+	"item.resourceful_tools.hook_knife.line2": "Use on wool blocks to drop string",
+		
 	"item.resourceful_tools.hand_pick": "Mine Picareta",
 	"item.resourceful_tools.hand_pick.line1":"Usado em várias pedras para obter recursos",
 	

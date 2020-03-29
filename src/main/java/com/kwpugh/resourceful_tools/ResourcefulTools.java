@@ -53,7 +53,7 @@ public class ResourcefulTools
     private void doClientStuff(final FMLClientSetupEvent event)
     {
 
-    	logger.info("ResourcefulTools client settings {}", event.getMinecraftSupplier().get().gameSettings);
+    	logger.info("ResourcefulTools client setup", event.getMinecraftSupplier().get().gameSettings);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)

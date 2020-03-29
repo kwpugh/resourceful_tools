@@ -4,6 +4,7 @@ import com.kwpugh.resourceful_tools.ResourcefulTools;
 import com.kwpugh.resourceful_tools.items.HandPick;
 import com.kwpugh.resourceful_tools.items.HandScraper;
 import com.kwpugh.resourceful_tools.items.HandTiller;
+import com.kwpugh.resourceful_tools.items.HookKnife;
 import com.kwpugh.resourceful_tools.items.TreeTrimmer;
 
 import net.minecraft.item.BlockItem;
@@ -18,6 +19,7 @@ public class ItemInit
 	public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, ResourcefulTools.modid);
 	
 	public static final RegistryObject<Item> HAND_TILLER = ITEMS.register("hand_tiller", () -> new HandTiller(ItemTier.IRON, -2, -3, new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> HOOK_KNIFE = ITEMS.register("hook_knife", () -> new HookKnife(ItemTier.IRON, -2, -3, new Item.Properties().group(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> HAND_PICK = ITEMS.register("hand_pick", () -> new HandPick(ItemTier.IRON, -2, -3, new Item.Properties().group(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> HAND_SCRAPPER = ITEMS.register("hand_scraper", () -> new HandScraper(new Item.Properties().maxDamage(128).group(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> TREE_TRIMMER = ITEMS.register("tree_trimmer", () -> new TreeTrimmer(ItemTier.IRON, -2, -3, new Item.Properties().group(ResourcefulTools.resourceful_tools)));
