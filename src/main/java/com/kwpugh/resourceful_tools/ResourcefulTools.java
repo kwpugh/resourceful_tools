@@ -8,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 import com.kwpugh.resourceful_tools.config.Config;
 import com.kwpugh.resourceful_tools.init.BlockInit;
 import com.kwpugh.resourceful_tools.init.ItemInit;
+import com.kwpugh.resourceful_tools.util.GroupResourcefullTools;
 
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.MinecraftForge;
@@ -73,6 +74,6 @@ public class ResourcefulTools
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event)
     {
-    	logger.info("ResourcefulTools server starting");
+    	logger.info("ResourcefulTools server setup");
     }
 }

@@ -1,17 +1,36 @@
 {	
 	"item.resourceful_tools.hand_tiller": "Hand Tiller",
 	"item.resourceful_tools.hand_tiller.line1":"Used to obtain resources from Clay and Gravel",
+	"item.resourceful_tools.hand_tiller.jei_info.line1":"Use on gravel to get a chance of a bone fragment and clay for a chance of an ink sac",
+	
 	"item.resourceful_tools.hook_knife": "Hook Knife",
 	"item.resourceful_tools.hook_knife.line1": "Used to get string from Sheep without harming",
 	"item.resourceful_tools.hook_knife.line2": "Use on wool blocks to drop string",
+	
 	"item.resourceful_tools.hand_pick": "Hand Pick",
 	"item.resourceful_tools.hand_pick.line1":"Used to obtain resources from several types of stones",
+	"item.resourceful_tools.hand_pick.jei_info.line1":"Used to obtain resources from several types of stones",
+	"item.resourceful_tools.hand_pick.jei_info.line2":"Sandstone -> Saltpeter",
+	"item.resourceful_tools.hand_pick.jei_info.line3":"Netherrack -> Sulfur",
+	"item.resourceful_tools.hand_pick.jei_info.line4":"Magma Block -> Small Pile of Blaze Powder",
+	"item.resourceful_tools.hand_pick.jei_info.line5":"Nether Quartz -> Ghast Tear Fragment",
+	"item.resourceful_tools.hand_pick.jei_info.line6":"End Stone -> Nether Star Fragment",
+	
 	"item.resourceful_tools.hand_scraper": "Hand Scraper",
 	"item.resourceful_tools.hand_scrapper.line1":"Used on Bamboo to make sheets",
 	"item.resourceful_tools.hand_scrapper.line2":"Use in a crafting table",
+	
 	"item.resourceful_tools.tree_trimmer": "Hand Trimmer",
 	"item.resourceful_tools.tree_trimmer.line1": "Used to obtain resources from leaves and sea plants",
-	
+	"item.resourceful_tools.tree_trimmer.jei_info.line1":"Use on various blocks for a chance to obtain the following drops:",
+	"item.resourceful_tools.tree_trimmer.jei_info.line2":"Spruce Leaves -> Feather",
+	"item.resourceful_tools.tree_trimmer.jei_info.line3":"Birch Leaves -> String",
+	"item.resourceful_tools.tree_trimmer.jei_info.line4":"Oak Leaves -> Apple",
+	"item.resourceful_tools.tree_trimmer.jei_info.line5":"Acacia Leaves -> Rabbit Foot",
+	"item.resourceful_tools.tree_trimmer.jei_info.line6":"Jungle Leaves -> Spider Eye",
+	"item.resourceful_tools.tree_trimmer.jei_info.line7":"Dark Oak Leaves -> Ender Pearl Fragment",
+	"item.resourceful_tools.tree_trimmer.jei_info.line8":"Tall Seagrass -> Prismarine Crystal",
+	"item.resourceful_tools.tree_trimmer.jei_info.line9":"Kelp Plant - > Prismarine Shard",
 	
 	"item.resourceful_tools.powder_sulfur": "Sulfur",
 	"item.resourceful_tools.powder_saltpeter": "Saltpeter",
