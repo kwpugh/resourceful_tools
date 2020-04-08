@@ -40,7 +40,7 @@ public class ResourcefulTools
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
         
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -51,7 +51,7 @@ public class ResourcefulTools
         logger.info("ResourcefulTools common setup");
     }
 
-    private void doClientStuff(final FMLClientSetupEvent event)
+    private void clientSetup(final FMLClientSetupEvent event)
     {
 
     	logger.info("ResourcefulTools client setup", event.getMinecraftSupplier().get().gameSettings);
