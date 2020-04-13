@@ -1,4 +1,9 @@
+
 {	
+	"item.resourceful_tools.glass_placer": "Glass Placer",
+	"item.resourceful_tools.glass_placer.line1": "Place a glass block in the air, where the player is looking",
+	"item.resourceful_tools.glass_placer.line2": "Right-click to use.",
+
 	"item.resourceful_tools.hand_tiller": "Hand Tiller",
 	"item.resourceful_tools.hand_tiller.line1":"Used to obtain resources from Clay and Gravel",
 	"item.resourceful_tools.hand_tiller.jei_info.line1":"Use on gravel to get a chance of a bone fragment and clay for a chance of an ink sac",

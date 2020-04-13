@@ -1,6 +1,7 @@
 package com.kwpugh.resourceful_tools.init;
 
 import com.kwpugh.resourceful_tools.ResourcefulTools;
+import com.kwpugh.resourceful_tools.items.GlassPlacer;
 import com.kwpugh.resourceful_tools.items.HandPick;
 import com.kwpugh.resourceful_tools.items.HandScraper;
 import com.kwpugh.resourceful_tools.items.HandTiller;
@@ -23,6 +24,7 @@ public class ItemInit
 	public static final RegistryObject<Item> HAND_PICK = ITEMS.register("hand_pick", () -> new HandPick(ItemTier.IRON, -2, -3, new Item.Properties().group(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> HAND_SCRAPPER = ITEMS.register("hand_scraper", () -> new HandScraper(new Item.Properties().maxDamage(128).group(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> TREE_TRIMMER = ITEMS.register("tree_trimmer", () -> new TreeTrimmer(ItemTier.IRON, -2, -3, new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> GLASS_PLACER = ITEMS.register("glass_placer", () -> new GlassPlacer(new Item.Properties().maxDamage(8).group(ResourcefulTools.resourceful_tools)));
 	
 	public static final RegistryObject<Item> POWDER_SULFUR = ITEMS.register("powder_sulfur", () -> new Item(new Item.Properties().group(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> POWDER_SALTPETER = ITEMS.register("powder_saltpeter", () -> new Item(new Item.Properties().group(ResourcefulTools.resourceful_tools)));

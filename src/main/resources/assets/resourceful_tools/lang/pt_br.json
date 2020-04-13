@@ -1,4 +1,7 @@
 {
+	"item.resourceful_tools.glass_placer": "Glass Placer",
+	"item.resourceful_tools.glass_placer.line1": "Place a glass block in the air, where the player is looking",
+	
 	"item.resourceful_tools.hand_tiller": "Rastelo",
 	"item.resourceful_tools.hand_tiller.line1":"Usado em Argila e Cascalho, para obter recursos",
 
