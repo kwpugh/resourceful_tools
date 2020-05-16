@@ -45,7 +45,6 @@ public class TreeTrimmer extends ShovelItem
 		double crystalChance = ResourcefulToolsConfig.prismarine_crystal_chance.get();
 		double shardChance = ResourcefulToolsConfig.prismarine_shard_chance.get();
 		
-		
 		Block block = state.getBlock();
 		
 		if (!worldIn.isRemote)
@@ -145,7 +144,6 @@ public class TreeTrimmer extends ShovelItem
 		        {
 		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.PRISMARINE_SHARD, 1)));
 		        }
-			
 			}
 		
 			if(!(block == Blocks.SPRUCE_LEAVES) || 

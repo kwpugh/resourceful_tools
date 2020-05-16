@@ -20,7 +20,7 @@ public class ResourcefulToolsConfig
 	public static ForgeConfigSpec.DoubleValue pearl_fragment_chance;
 	public static ForgeConfigSpec.DoubleValue prismarine_crystal_chance;
 	public static ForgeConfigSpec.DoubleValue prismarine_shard_chance;
-
+	
 	public static ForgeConfigSpec.Builder server_output;
 	
 	

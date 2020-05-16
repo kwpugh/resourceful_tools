@@ -27,21 +27,21 @@ import net.minecraftforge.fml.loading.FMLPaths;
 public class ResourcefulTools
 {
 	public static final String modid = "resourceful_tools";
-	public static final Logger logger = LogManager.getLogger(modid);	
+	public static final Logger logger = LogManager.getLogger(modid);
 	public static final ItemGroup resourceful_tools = new GroupResourcefullTools();
 
     public ResourcefulTools()
     {
     	Config.loadConfig(Config.config, FMLPaths.CONFIGDIR.get().resolve("resourceful_tools.toml").toString());
-    	
+
     	BlockInit.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
     	ItemInit.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-    	
+
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
-        
+
         MinecraftForge.EVENT_BUS.register(this);
     }
 
@@ -54,7 +54,7 @@ public class ResourcefulTools
     private void clientSetup(final FMLClientSetupEvent event)
     {
 
-    	logger.info("ResourcefulTools client setup", event.getMinecraftSupplier().get().gameSettings);
+    	logger.info("ResourcefulTools client setup");
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
