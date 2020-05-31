@@ -1,30 +1,46 @@
 {
-	"item.resourceful_tools.glass_placer": "Glass Placer",
-	"item.resourceful_tools.glass_placer.line1": "Place a glass block in the air, where the player is looking",
+	"item.resourceful_tools.glass_placer": "Colocador de Vidro",
+	"item.resourceful_tools.glass_placer.line1": "Coloca um bloco de vidro no ar, na direção em que o jogador está olhando",
+	"item.resourceful_tools.glass_placer.line2": "Botão-direito para usar.",
 	
 	"item.resourceful_tools.hand_tiller": "Rastelo",
 	"item.resourceful_tools.hand_tiller.line1":"Usado em Argila e Cascalho, para obter recursos",
+	"item.resourceful_tools.hand_tiller.jei_info.line1":"Use para obter os seguintes itens:\nCascalho -> Fragmento de Osso \nArgila -> Bolsa de Tinta",
 
-	"item.resourceful_tools.hook_knife": "Hook Knife",
-	"item.resourceful_tools.hook_knife.line1": "Used to get string from Sheep without harming",
-	"item.resourceful_tools.hook_knife.line2": "Use on wool blocks to drop string",
+	"item.resourceful_tools.hook_knife": "Faca Gancho",
+	"item.resourceful_tools.hook_knife.line1": "Usada para obter Linha de ovelhas, sem causar danos",
+	"item.resourceful_tools.hook_knife.line2": "Use em blocos de Lã para obter Linha",
 		
 	"item.resourceful_tools.hand_pick": "Mine Picareta",
-	"item.resourceful_tools.hand_pick.line1":"Usado em várias pedras para obter recursos",
+	"item.resourceful_tools.hand_pick.line1":"Usado em vários tipos de pedras para obter recursos",
+	"item.resourceful_tools.hand_pick.jei_info.line1":"Usado em vários tipos de pedras para obter recursos",
+	"item.resourceful_tools.hand_pick.jei_info.line2":"Arenito -> Salitre",
+	"item.resourceful_tools.hand_pick.jei_info.line3":"Netherrack -> Enxofre",
+	"item.resourceful_tools.hand_pick.jei_info.line4":"Bloco de Magma -> Punhado de Pó de Blaze",
+	"item.resourceful_tools.hand_pick.jei_info.line5":"Minério de Quartzo do Nether -> Fragmento de Lágrima de Ghast",
+	"item.resourceful_tools.hand_pick.jei_info.line6":"Pedra do End -> Fragmento de Estrela do Nether",
 	
 	"item.resourceful_tools.hand_scraper": "Espatula de Raspagem",
 	"item.resourceful_tools.hand_scrapper.line1":"Usado no bambu para fazer folhas",
 	"item.resourceful_tools.hand_scrapper.line2":"Use em uma Bancada de Trabalho",
 	
 	"item.resourceful_tools.tree_trimmer": "Podão",
-	"item.resourceful_tools.tree_trimmer.line1": "Used to obtain resources from leaves and sea plants",
-	
+	"item.resourceful_tools.tree_trimmer.line1": "Usado para obter recursos de folhas e plantas aquáticas",
+	"item.resourceful_tools.tree_trimmer.jei_info.line1":"Use nestes blocos para obter os seguintes itens:",
+	"item.resourceful_tools.tree_trimmer.jei_info.line2":"Folhas de Pinheiro -> Pena",
+	"item.resourceful_tools.tree_trimmer.jei_info.line3":"Folhas de Bétula -> Linha",
+	"item.resourceful_tools.tree_trimmer.jei_info.line4":"Folhas de Carvalho -> Maçã",
+	"item.resourceful_tools.tree_trimmer.jei_info.line5":"Folhas de Acácia -> Pé de Coelho",
+	"item.resourceful_tools.tree_trimmer.jei_info.line6":"Folhas da Selva -> Olho de Aranha",
+	"item.resourceful_tools.tree_trimmer.jei_info.line7":"Folhas de Carvalho Escuro -> Fragmento de Pérola de Ender",
+	"item.resourceful_tools.tree_trimmer.jei_info.line8":"Erva Marinha Alta -> Cristal de Prismarinho",
+	"item.resourceful_tools.tree_trimmer.jei_info.line9":"Alga Plantada -> Pedaço de Prismarino",
 	
 	"item.resourceful_tools.powder_sulfur": "Enxofre",
 	"item.resourceful_tools.powder_saltpeter": "Salitre",
 	
 	"item.resourceful_tools.bone_fragment": "Fragmento de Osso",
-	"item.resourceful_tools.pearl_fragment": "Fragmento de Pérola",
+	"item.resourceful_tools.pearl_fragment": "Fragmento de Pérola de Ender",
 	"item.resourceful_tools.small_blaze_powder": "Punhado de Pó de Blaze",
 	"item.resourceful_tools.nether_star_fragment": "Fragmento de Estrela do Nether",
 	"item.resourceful_tools.ghast_tear_fragment": "Fragmento de Lágrima de Ghast",
@@ -32,16 +48,16 @@
 	"item.resourceful_tools.bamboo_sheet": "Folha de Bambu",
 	"item.resourceful_tools.large_bamboo_sheet": "Folha Grande de Bambu",
 	
-	"item.resourceful_tools.ream_of_paper": "Ream of Paper",
+	"item.resourceful_tools.ream_of_paper": "Resma de Papel",
 	
-	"item.resourceful_tools.springs.general.line1": "Right-click on block with empty bucket",	
-	"block.resourceful_tools.wellspring": "Wellspring",
-	"item.resourceful_tools.wellspring": "Wellspring",
-	"item.resourceful_tools.wellspring.line1": "An endless source of fresh, clean water",
+	"item.resourceful_tools.springs.general.line1": "Botão-direito no bloco com o Balde Vazio",	
+	"block.resourceful_tools.wellspring": "Fonte de Água",
+	"item.resourceful_tools.wellspring": "Fonte de Água",
+	"item.resourceful_tools.wellspring.line1": "Uma fonte inesgotável de água limpa e fresca",
 
-	"block.resourceful_tools.lavaspring": "Lavaspring",
-	"item.resourceful_tools.lavaspring": "Lavaspring",
-	"item.resourceful_tools.lavaspring.line1": "An endless source of piping hot lava",
+	"block.resourceful_tools.lavaspring": "Fonte de Lava",
+	"item.resourceful_tools.lavaspring": "Fonte de Lava",
+	"item.resourceful_tools.lavaspring.line1": "Uma fonte inesgotável de lava quente",
 		
-	"itemGroup.resourceful_tools": "Resourceful Tools (Ferramentas de Recursos)"
+	"itemGroup.resourceful_tools": "Resourceful Tools"
 }
