@@ -19,6 +19,38 @@ public class ItemInit
 {
 	public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, ResourcefulTools.modid);
 
+	public static final RegistryObject<Item> DIRT_SINGLE = ITEMS.register("dirt_single", () -> new BlockItem(BlockInit.DIRT_SINGLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> DIRT_DOUBLE = ITEMS.register("dirt_double", () -> new BlockItem(BlockInit.DIRT_DOUBLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> DIRT_TRIPLE = ITEMS.register("dirt_triple", () -> new BlockItem(BlockInit.DIRT_TRIPLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	
+	public static final RegistryObject<Item> GRAVEL_SINGLE = ITEMS.register("gravel_single", () -> new BlockItem(BlockInit.GRAVEL_SINGLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> GRAVEL_DOUBLE = ITEMS.register("gravel_double", () -> new BlockItem(BlockInit.GRAVEL_DOUBLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> GRAVEL_TRIPLE = ITEMS.register("gravel_triple", () -> new BlockItem(BlockInit.GRAVEL_TRIPLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	
+	public static final RegistryObject<Item> SAND_SINGLE = ITEMS.register("sand_single", () -> new BlockItem(BlockInit.SAND_SINGLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> SAND_DOUBLE = ITEMS.register("sand_double", () -> new BlockItem(BlockInit.SAND_DOUBLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> SAND_TRIPLE = ITEMS.register("sand_triple", () -> new BlockItem(BlockInit.SAND_TRIPLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	
+	public static final RegistryObject<Item> COBBLESTONE_SINGLE = ITEMS.register("cobblestone_single", () -> new BlockItem(BlockInit.COBBLESTONE_SINGLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> COBBLESTONE_DOUBLE = ITEMS.register("cobblestone_double", () -> new BlockItem(BlockInit.COBBLESTONE_DOUBLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> COBBLESTONE_TRIPLE = ITEMS.register("cobblestone_triple", () -> new BlockItem(BlockInit.COBBLESTONE_TRIPLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	
+	public static final RegistryObject<Item> ANDESITE_SINGLE = ITEMS.register("andesite_single", () -> new BlockItem(BlockInit.ANDESITE_SINGLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> ANDESITE_DOUBLE = ITEMS.register("andesite_double", () -> new BlockItem(BlockInit.ANDESITE_DOUBLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> ANDESITE_TRIPLE = ITEMS.register("andesite_triple", () -> new BlockItem(BlockInit.ANDESITE_TRIPLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	
+	public static final RegistryObject<Item> DIORITE_SINGLE = ITEMS.register("diorite_single", () -> new BlockItem(BlockInit.DIORITE_SINGLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> DIORITE_DOUBLE = ITEMS.register("diorite_double", () -> new BlockItem(BlockInit.DIORITE_DOUBLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> DIORITE_TRIPLE = ITEMS.register("diorite_triple", () -> new BlockItem(BlockInit.DIORITE_TRIPLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	
+	public static final RegistryObject<Item> GRANITE_SINGLE = ITEMS.register("granite_single", () -> new BlockItem(BlockInit.GRANITE_SINGLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> GRANITE_DOUBLE = ITEMS.register("granite_double", () -> new BlockItem(BlockInit.GRANITE_DOUBLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> GRANITE_TRIPLE = ITEMS.register("granite_triple", () -> new BlockItem(BlockInit.GRANITE_TRIPLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	
+	public static final RegistryObject<Item> NETHERRACK_SINGLE = ITEMS.register("netherrack_single", () -> new BlockItem(BlockInit.NETHERRACK_SINGLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> NETHERRACK_DOUBLE = ITEMS.register("netherrack_double", () -> new BlockItem(BlockInit.NETHERRACK_DOUBLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> NETHERRACK_TRIPLE = ITEMS.register("netherrack_triple", () -> new BlockItem(BlockInit.NETHERRACK_TRIPLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	
 	public static final RegistryObject<Item> HAND_TILLER = ITEMS.register("hand_tiller", () -> new HandTiller(ItemTier.IRON, -2, -3, new Item.Properties().group(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> HOOK_KNIFE = ITEMS.register("hook_knife", () -> new HookKnife(ItemTier.IRON, -2, -3, new Item.Properties().group(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> HAND_PICK = ITEMS.register("hand_pick", () -> new HandPick(ItemTier.IRON, -2, -3, new Item.Properties().group(ResourcefulTools.resourceful_tools)));
