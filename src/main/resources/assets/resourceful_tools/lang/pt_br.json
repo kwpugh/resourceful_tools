@@ -59,6 +59,78 @@
 	"block.resourceful_tools.lavaspring": "Fonte de Lava",
  	"item.resourceful_tools.lavaspring": "Fonte de Lava",
  	"item.resourceful_tools.lavaspring.line1": "Uma fonte inesgotável de lava quente",
+	
+	"block.resourceful_tools.dirt_single": "Terra Comprimida",
+	"item.resourceful_tools.dirt_single": "Terra Comprimida",
+
+	"block.resourceful_tools.dirt_double": "Terra Bi-Comprimida",
+	"item.resourceful_tools.dirt_double": "Terra Bi-Comprimida",
+
+	"block.resourceful_tools.dirt_triple": "Terra Tri-Comprimida",
+	"item.resourceful_tools.dirt_triple": "Terra Tri-Comprimida",
+
+	"block.resourceful_tools.gravel_single": "Cascalho Comprimido",
+	"item.resourceful_tools.gravel_single": "CascalhoComprimido",
+
+	"block.resourceful_tools.gravel_double": "Cascalho Bi-Comprimido",
+	"item.resourceful_tools.gravel_double": "Cascalho Bi-Comprimido",
+
+	"block.resourceful_tools.gravel_triple": "Cascalho Tri-Comprimido",
+	"item.resourceful_tools.gravel_triple": "Cascalho Tri-Comprimido",
+
+	"block.resourceful_tools.sand_single": "Areia Comprimida",
+	"item.resourceful_tools.sand_single": "Areia Comprimida",
+
+	"block.resourceful_tools.sand_double": "Areia Bi-Comprimida",
+	"item.resourceful_tools.sand_double": "Areia Bi-Comprimida",
+
+	"block.resourceful_tools.sand_triple": "Areia Tri-Comprimida",
+	"item.resourceful_tools.sand_triple": "Areia Tri-Comprimida",
+			
+	"block.resourceful_tools.cobblestone_single": "Pedregulho Comprimido",
+	"item.resourceful_tools.cobblestone_single": "Pedregulho Comprimido",
+
+	"block.resourceful_tools.cobblestone_double": "Pedregulho Bi-Comprimida",
+	"item.resourceful_tools.cobblestone_double": "Pedregulho Bi-Comprimida",
+
+	"block.resourceful_tools.cobblestone_triple": "Pedregulho Tri-Comprimida",
+	"item.resourceful_tools.cobblestone_triple": "Pedregulho Tri-Comprimida",
+
+	"block.resourceful_tools.andesite_single": "Andesito Comprimido",
+	"item.resourceful_tools.andesite_single": "Andesito Comprimido",
+
+	"block.resourceful_tools.andesite_double": "Andesito Bi-Comprimido",
+	"item.resourceful_tools.andesite_double": "Andesito Bi-Comprimido",
+
+	"block.resourceful_tools.andesite_triple": "Andesito Tri-Comprimido",
+	"item.resourceful_tools.andesite_triple": "Andesito Tri-Comprimido",
+
+	"block.resourceful_tools.diorite_single": "Diorito Comprimido",
+	"item.resourceful_tools.diorite_single": "Diorito Comprimido",
+
+	"block.resourceful_tools.diorite_double": "Diorito Bi-Comprimido",
+	"item.resourceful_tools.diorite_double": "Diorito Bi-Comprimido",
+
+	"block.resourceful_tools.diorite_triple": "Diorito Tri-Comprimido",
+	"item.resourceful_tools.diorite_triple": "Diorito Tri-Comprimido",
+
+	"block.resourceful_tools.granite_single": "Granito Comprimido",
+	"item.resourceful_tools.granite_single": "Granito Comprimido",
+
+	"block.resourceful_tools.granite_double": "Granito Bi-Comprimido",
+	"item.resourceful_tools.granite_double": "Granito Bi-Comprimido",
+
+	"block.resourceful_tools.granite_triple": "Granito Tri-Comprimido",
+	"item.resourceful_tools.granite_triple": "Granito Tri-Comprimido",
+
+	"block.resourceful_tools.netherrack_single": "Netherrack Comprimido",
+	"item.resourceful_tools.netherrack_single": "Netherrack Comprimido",
+
+	"block.resourceful_tools.netherrack_double": "Netherrack Bi-Comprimido",
+	"item.resourceful_tools.netherrack_double": "Netherrack Bi-Comprimido",
+
+	"block.resourceful_tools.netherrack_triple": "Netherrack Tri-Comprimido",
+	"item.resourceful_tools.netherrack_triple": "Netherrack Tri-Comprimido",
 		
 	"itemGroup.resourceful_tools": "Resourceful Tools"
 }
