@@ -17,7 +17,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ItemInit
 {
-	public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, ResourcefulTools.modid);
+	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ResourcefulTools.modid);
 
 	public static final RegistryObject<Item> DIRT_SINGLE = ITEMS.register("dirt_single", () -> new BlockItem(BlockInit.DIRT_SINGLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> DIRT_DOUBLE = ITEMS.register("dirt_double", () -> new BlockItem(BlockInit.DIRT_DOUBLE.get(), new Item.Properties().group(ResourcefulTools.resourceful_tools)));

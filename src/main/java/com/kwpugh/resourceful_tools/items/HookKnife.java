@@ -20,7 +20,7 @@ import net.minecraft.item.Items;
 import net.minecraft.item.SwordItem;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
@@ -79,7 +79,7 @@ public class HookKnife extends SwordItem
 		if(entity instanceof SheepEntity)
 		{
 			World world = player.world;
-			Vec3d pos = entity.getPositionVec();
+			Vector3d pos = entity.getPositionVec();
 			
 			 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.STRING, 1))); 
 	    	 stack.damageItem(1, player, (p_220038_0_) -> {
@@ -116,7 +116,7 @@ public class HookKnife extends SwordItem
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
 		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.resourceful_tools.hook_knife.line1").applyTextStyle(TextFormatting.GREEN)));
-		tooltip.add((new TranslationTextComponent("item.resourceful_tools.hook_knife.line2").applyTextStyle(TextFormatting.GREEN)));
+		tooltip.add((new TranslationTextComponent("item.resourceful_tools.hook_knife.line1").func_240699_a_(TextFormatting.GREEN)));
+		tooltip.add((new TranslationTextComponent("item.resourceful_tools.hook_knife.line2").func_240699_a_(TextFormatting.GREEN)));
 	}
 }

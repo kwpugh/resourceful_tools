@@ -59,7 +59,7 @@ public class Lavaspring extends Block
 	public void addInformation(ItemStack stack, @Nullable IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
 		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.resourceful_tools.lavaspring.line1").applyTextStyle(TextFormatting.GREEN)));
-		tooltip.add((new TranslationTextComponent("item.resourceful_tools.springs.general.line1").applyTextStyle(TextFormatting.YELLOW)));
+		tooltip.add((new TranslationTextComponent("item.resourceful_tools.lavaspring.line1").func_240699_a_(TextFormatting.GREEN)));
+		tooltip.add((new TranslationTextComponent("item.resourceful_tools.springs.general.line1").func_240699_a_(TextFormatting.YELLOW)));
 	}
 }

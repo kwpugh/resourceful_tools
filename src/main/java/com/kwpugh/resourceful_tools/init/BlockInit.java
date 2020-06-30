@@ -14,7 +14,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public final class BlockInit
 {
-	public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, ResourcefulTools.modid);
+	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ResourcefulTools.modid);
 
 	public static final RegistryObject<Block> WELLSPRING = BLOCKS.register("wellspring", () -> new Wellspring(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(1.0F, 1.0F).sound(SoundType.METAL)));
 	public static final RegistryObject<Block> LAVASPRING = BLOCKS.register("lavaspring", () -> new Lavaspring(Block.Properties.create(Material.IRON, MaterialColor.IRON).hardnessAndResistance(1.0F, 1.0F).sound(SoundType.METAL)));
