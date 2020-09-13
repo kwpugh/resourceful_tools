@@ -8,8 +8,12 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.state.DirectionProperty;
+import net.minecraft.state.StateContainer;
+import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
@@ -24,11 +28,26 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class Lavaspring extends Block
 {
+	public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+	
 	public Lavaspring(Properties properties)
 	{
 		super(properties);		
 	}
 
+    @Nullable
+    @Override
+    public BlockState getStateForPlacement(BlockItemUseContext context) 
+    {
+        return getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite());
+    }
+    
+    @Override
+    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)
+    {
+        builder.add(FACING);
+    }
+    
 	public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit)
 	{
 	   ItemStack itemstack = player.getHeldItem(handIn);

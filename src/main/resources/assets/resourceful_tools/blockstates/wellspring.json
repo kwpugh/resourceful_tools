@@ -1,6 +1,8 @@
 {
-    "variants": 
-    {
-        "": { "model": "resourceful_tools:block/wellspring" }
-    }
+    "variants": {
+        "facing=north": { "model": "resourceful_tools:block/wellspring", "y": 0 },
+        "facing=south": { "model": "resourceful_tools:block/wellspring", "y": 180 },
+        "facing=west":  { "model": "resourceful_tools:block/wellspring", "y": 270 },
+        "facing=east":  { "model": "resourceful_tools:block/wellspring", "y": 90 }
+		}
 }
