@@ -82,7 +82,7 @@ public class HandTiller extends ShovelItem
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
 		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.resourceful_tools.hand_tiller.line1").func_240699_a_(TextFormatting.GREEN)));
+		tooltip.add((new TranslationTextComponent("item.resourceful_tools.hand_tiller.line1").mergeStyle(TextFormatting.GREEN)));
 	}
 }
 
