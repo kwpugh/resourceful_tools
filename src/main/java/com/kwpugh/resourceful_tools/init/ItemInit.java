@@ -60,7 +60,7 @@ public class ItemInit
 
 	public static final RegistryObject<Item> POWDER_SULFUR = ITEMS.register("powder_sulfur", () -> new Item(new Item.Properties().group(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> POWDER_SALTPETER = ITEMS.register("powder_saltpeter", () -> new Item(new Item.Properties().group(ResourcefulTools.resourceful_tools)));
-
+	
 	public static final RegistryObject<Item> BONE_FRAGMENT = ITEMS.register("bone_fragment", () -> new Item(new Item.Properties().group(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> PEARL_FRAGMENT = ITEMS.register("pearl_fragment", () -> new Item(new Item.Properties().group(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> SMALL_BLAZE_POWDER = ITEMS.register("small_blaze_powder", () -> new Item(new Item.Properties().group(ResourcefulTools.resourceful_tools)));
