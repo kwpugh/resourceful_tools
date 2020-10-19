@@ -12,6 +12,7 @@ public class ResourcefulToolsConfig
 	public static ForgeConfigSpec.DoubleValue small_blaze_chance;
 	public static ForgeConfigSpec.DoubleValue ghast_tear_fragment_chance;
 	public static ForgeConfigSpec.DoubleValue nether_star_fragment_chance;
+	public static ForgeConfigSpec.DoubleValue netherite_fragment_chance;
 	public static ForgeConfigSpec.DoubleValue feather_chance;
 	public static ForgeConfigSpec.DoubleValue string_chance;
 	public static ForgeConfigSpec.DoubleValue apple_chance;
@@ -48,11 +49,15 @@ public class ResourcefulToolsConfig
 		
 		ghast_tear_fragment_chance = server
 				.comment("Chance to drop ghast tear fragment from Nether Quartz block with Hand Pick")
-				.defineInRange("ghast_tear_fragment_chance", 0.20, 0.0, 1.0);	
+				.defineInRange("ghast_tear_fragment_chance", 0.10, 0.0, 1.0);	
 		
 		nether_star_fragment_chance = server
 				.comment("Chance to drop nether star fragment from End Stone with Hand Pick")
-				.defineInRange("nether_star_fragment_chance", 0.15, 0.0, 1.0);	
+				.defineInRange("nether_star_fragment_chance", 0.10, 0.0, 1.0);	
+
+		netherite_fragment_chance = server
+				.comment("Chance to drop netherite fragment from Blackstone with Hand Pick")
+				.defineInRange("netherite_fragment_chance", 0.10, 0.0, 1.0);	
 		
 		feather_chance = server
 				.comment("Chance to drop feathers from Spruce Leaves with Hand Trimmer")

@@ -41,6 +41,7 @@ public class JEIInfoPages implements IModPlugin
 				"item.resourceful_tools.hand_pick.jei_info.line3",
 				"item.resourceful_tools.hand_pick.jei_info.line4",
 				"item.resourceful_tools.hand_pick.jei_info.line5",
-				"item.resourceful_tools.hand_pick.jei_info.line6");
+				"item.resourceful_tools.hand_pick.jei_info.line6",
+				"item.resourceful_tools.hand_pick.jei_info.line7");
 	}
 }

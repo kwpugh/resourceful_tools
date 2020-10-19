@@ -39,6 +39,7 @@ public class HandPick extends PickaxeItem
 		double smallBlazeChance = ResourcefulToolsConfig.small_blaze_chance.get();
 		double ghastTearChance = ResourcefulToolsConfig.ghast_tear_fragment_chance.get();
 		double netherStarChance = ResourcefulToolsConfig.nether_star_fragment_chance.get();
+		double netheriteChance = ResourcefulToolsConfig.netherite_fragment_chance.get();
 
 		Block block = state.getBlock();
 		
@@ -92,6 +93,18 @@ public class HandPick extends PickaxeItem
 		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.GHAST_TEAR_FRAGMENT.get(), 1)));
 		        }		
 			}
+			else if(block == Blocks.BLACKSTONE)
+			{
+		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+		         
+		        double r = random.nextDouble();
+		        if (r <= netheriteChance)
+		        {
+		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.NETHERITE_FRAGMENT.get(), 1)));
+		        }		
+			}
 			else if(block == Blocks.END_STONE)
 			{
 		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
@@ -109,6 +122,7 @@ public class HandPick extends PickaxeItem
 					!(block == Blocks.NETHERRACK) || 
 					!(block == Blocks.MAGMA_BLOCK) || 
 					!(block == Blocks.NETHER_QUARTZ_ORE) || 
+					!(block == Blocks.BLACKSTONE) || 
 					!(block == Blocks.END_STONE))
 			{
 		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {

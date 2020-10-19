@@ -66,6 +66,8 @@ public class ItemInit
 	public static final RegistryObject<Item> SMALL_BLAZE_POWDER = ITEMS.register("small_blaze_powder", () -> new Item(new Item.Properties().group(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> NETHER_STAR_FRAGMENT = ITEMS.register("nether_star_fragment", () -> new Item(new Item.Properties().group(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> GHAST_TEAR_FRAGMENT = ITEMS.register("ghast_tear_fragment", () -> new Item(new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> NETHERITE_FRAGMENT = ITEMS.register("netherite_fragment", () -> new Item(new Item.Properties().group(ResourcefulTools.resourceful_tools)));
+	
 	public static final RegistryObject<Item> BAMBOO_SHEET = ITEMS.register("bamboo_sheet", () -> new Item(new Item.Properties().group(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> LARGE_BAMBOO_SHEET = ITEMS.register("large_bamboo_sheet", () -> new Item(new Item.Properties().group(ResourcefulTools.resourceful_tools)));
 
