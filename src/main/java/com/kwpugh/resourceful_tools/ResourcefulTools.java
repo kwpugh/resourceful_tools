@@ -47,25 +47,21 @@ public class ResourcefulTools
 
     private void setup(final FMLCommonSetupEvent event)
     {
-
         logger.info("ResourcefulTools common setup");
     }
 
     private void clientSetup(final FMLClientSetupEvent event)
     {
-
     	logger.info("ResourcefulTools client setup");
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
     {
-
         InterModComms.sendTo("resourceful_tools", "helloworld", () -> { logger.info("Hello world from ResourcefulTools"); return "Hello world";});
     }
 
     private void processIMC(final InterModProcessEvent event)
     {
-
     	logger.info("ResourcefulTools IMC", event.getIMCStream().
                 map(m->m.getMessageSupplier().get()).
                 collect(Collectors.toList()));
