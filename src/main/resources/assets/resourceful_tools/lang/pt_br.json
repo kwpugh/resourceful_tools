@@ -37,7 +37,6 @@
  	"item.resourceful_tools.tree_trimmer.jei_info.line8":"Erva Marinha Alta -> Cristal de Prismarinho",
  	"item.resourceful_tools.tree_trimmer.jei_info.line9":"Alga Plantada -> Pedaço de Prismarino",
 	
-	
 	"item.resourceful_tools.powder_sulfur": "Enxofre",
 	"item.resourceful_tools.powder_saltpeter": "Salitre",
 	
@@ -46,6 +45,7 @@
 	"item.resourceful_tools.small_blaze_powder": "Punhado de Pó de Blaze",
 	"item.resourceful_tools.nether_star_fragment": "Fragmento de Estrela do Nether",
 	"item.resourceful_tools.ghast_tear_fragment": "Fragmento de Lágrima de Ghast",
+	"item.resourceful_tools.netherite_fragment": "Fragmento de Netherita",
 	
 	"item.resourceful_tools.bamboo_sheet": "Folha de Bambu",
 	"item.resourceful_tools.large_bamboo_sheet": "Folha de Bambu Grande",
@@ -60,6 +60,78 @@
 	"block.resourceful_tools.lavaspring": "Fonte de Lava",
  	"item.resourceful_tools.lavaspring": "Fonte de Lava",
  	"item.resourceful_tools.lavaspring.line1": "Uma fonte inesgotável de lava quente",
-		
+	
+	"block.resourceful_tools.dirt_single": "Terra Comprimida",
+	"item.resourceful_tools.dirt_single": "Terra Comprimida",
+
+	"block.resourceful_tools.dirt_double": "Terra Bicomprimida",
+	"item.resourceful_tools.dirt_double": "Terra Bicomprimida",
+
+	"block.resourceful_tools.dirt_triple": "Terra Tricomprimida",
+	"item.resourceful_tools.dirt_triple": "Terra Tricomprimida",
+
+	"block.resourceful_tools.gravel_single": "Cascalho Comprimido",
+	"item.resourceful_tools.gravel_single": "Cascalho Comprimido",
+
+	"block.resourceful_tools.gravel_double": "Cascalho Bicomprimido",
+	"item.resourceful_tools.gravel_double": "Cascalho Bicomprimido",
+
+	"block.resourceful_tools.gravel_triple": "Cascalho Tricomprimido",
+	"item.resourceful_tools.gravel_triple": "Cascalho Tricomprimido",
+
+	"block.resourceful_tools.sand_single": "Areia Comprimida",
+	"item.resourceful_tools.sand_single": "Areia Comprimida",
+
+	"block.resourceful_tools.sand_double": "Areia Bicomprimida",
+	"item.resourceful_tools.sand_double": "Areia Bicomprimida",
+
+	"block.resourceful_tools.sand_triple": "Areia Tricomprimida",
+	"item.resourceful_tools.sand_triple": "Areia Tricomprimida",
+	
+	"block.resourceful_tools.cobblestone_single": "Pedregulho Comprimido",
+	"item.resourceful_tools.cobblestone_single": "Pedregulho Comprimido",
+
+	"block.resourceful_tools.cobblestone_double": "Pedregulho Bicomprimido",
+	"item.resourceful_tools.cobblestone_double": "Pedregulho Bicomprimido",
+
+	"block.resourceful_tools.cobblestone_triple": "Pedregulho Tricomprimido",
+	"item.resourceful_tools.cobblestone_triple": "Pedregulho Tricomprimido",
+
+	"block.resourceful_tools.andesite_single": "Andesito Comprimido",
+	"item.resourceful_tools.andesite_single": "Andesito Comprimido",
+
+	"block.resourceful_tools.andesite_double": "Andesito Bicomprimido",
+	"item.resourceful_tools.andesite_double": "Andesito Bicomprimido",
+
+	"block.resourceful_tools.andesite_triple": "Andesito Tricomprimido",
+	"item.resourceful_tools.andesite_triple": "Andesito Tricomprimido",
+
+	"block.resourceful_tools.diorite_single": "Diorito Comprimido",
+	"item.resourceful_tools.diorite_single": "Diorito Comprimido",
+
+	"block.resourceful_tools.diorite_double": "Diorito Bicomprimido",
+	"item.resourceful_tools.diorite_double": "Diorito Bicomprimido",
+
+	"block.resourceful_tools.diorite_triple": "Diorito Tricomprimido",
+	"item.resourceful_tools.diorite_triple": "Diorito Tricomprimido",
+
+	"block.resourceful_tools.granite_single": "Granito Comprimido",
+	"item.resourceful_tools.granite_single": "Granito Comprimido",
+
+	"block.resourceful_tools.granite_double": "Granito Bicomprimido",
+	"item.resourceful_tools.granite_double": "Granito Bicomprimido",
+
+	"block.resourceful_tools.granite_triple": "Granito Tricomprimido",
+	"item.resourceful_tools.granite_triple": "Granito Tricomprimido",
+
+	"block.resourceful_tools.netherrack_single": "Netherrack Comprimido",
+	"item.resourceful_tools.netherrack_single": "Netherrack Comprimido",
+
+	"block.resourceful_tools.netherrack_double": "Netherrack Bicomprimido",
+	"item.resourceful_tools.netherrack_double": "Netherrack Bicomprimido",
+
+	"block.resourceful_tools.netherrack_triple": "Netherrack Tricomprimido",
+	"item.resourceful_tools.netherrack_triple": "Netherrack Tricomprimido",
+	
 	"itemGroup.resourceful_tools": "Resourceful Tools"
 }
