@@ -4,27 +4,29 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.state.DirectionProperty;
-import net.minecraft.state.StateContainer;
-import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Hand;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.TranslationTextComponent;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.World;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.network.chat.Component;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 
 public class Lavaspring extends Block
 {
@@ -37,22 +39,22 @@ public class Lavaspring extends Block
 
     @Nullable
     @Override
-    public BlockState getStateForPlacement(BlockItemUseContext context) 
+    public BlockState getStateForPlacement(BlockPlaceContext context) 
     {
-        return getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite());
+        return defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
     
     @Override
-    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
         builder.add(FACING);
     }
     
-	public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit)
+	public InteractionResult use(BlockState state, Level worldIn, BlockPos pos, Player player, InteractionHand handIn, BlockHitResult hit)
 	{
-	   ItemStack itemstack = player.getHeldItem(handIn);
+	   ItemStack itemstack = player.getItemInHand(handIn);
 	   
-	   if (itemstack.getItem() == Items.BUCKET && !player.abilities.isCreativeMode)
+	   if (itemstack.getItem() == Items.BUCKET && !player.getAbilities().instabuild)
 	   {
 		   itemstack.shrink(1);
 		   ItemStack itemstack1;
@@ -60,25 +62,25 @@ public class Lavaspring extends Block
 	    
 		   if (itemstack.isEmpty())
 	       {
-	           player.setHeldItem(handIn, itemstack1);
+	           player.setItemInHand(handIn, itemstack1);
 	           
-	           return ActionResultType.SUCCESS;
+	           return InteractionResult.SUCCESS;
 	       }
-	       else if (!player.inventory.addItemStackToInventory(itemstack1))
+	       else if (!player.getInventory().add(itemstack1))
 	       {
-	           player.dropItem(itemstack1, false);
+	           player.drop(itemstack1, false);
 	            
-	           return ActionResultType.SUCCESS;
+	           return InteractionResult.SUCCESS;
 	       } 
 	   }
-	   return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
+	   return super.use(state, worldIn, pos, player, handIn, hit);
 	}
 	
 	@OnlyIn(Dist.CLIENT)
-	public void addInformation(ItemStack stack, @Nullable IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+	public void appendHoverText(ItemStack stack, @Nullable BlockGetter worldIn, List<Component> tooltip, TooltipFlag flagIn)
 	{
-		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.resourceful_tools.lavaspring.line1").mergeStyle(TextFormatting.GREEN)));
-		tooltip.add((new TranslationTextComponent("item.resourceful_tools.springs.general.line1").mergeStyle(TextFormatting.YELLOW)));
+		super.appendHoverText(stack, worldIn, tooltip, flagIn);
+		tooltip.add((new TranslatableComponent("item.resourceful_tools.lavaspring.line1").withStyle(ChatFormatting.GREEN)));
+		tooltip.add((new TranslatableComponent("item.resourceful_tools.springs.general.line1").withStyle(ChatFormatting.YELLOW)));
 	}
 }

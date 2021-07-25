@@ -2,10 +2,10 @@ package com.kwpugh.resourceful_tools.util;
 
 import com.kwpugh.resourceful_tools.init.ItemInit;
 
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 
-public class GroupResourcefullTools extends ItemGroup
+public class GroupResourcefullTools extends CreativeModeTab
 {
 	public GroupResourcefullTools() 
 	{
@@ -13,7 +13,7 @@ public class GroupResourcefullTools extends ItemGroup
 	}
 	
 	@Override
-	public ItemStack createIcon() 
+	public ItemStack makeIcon() 
 	{
 		return new ItemStack(ItemInit.HAND_TILLER.get());
 	}	

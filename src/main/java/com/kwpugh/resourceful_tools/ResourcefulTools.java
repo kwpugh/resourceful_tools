@@ -2,6 +2,7 @@ package com.kwpugh.resourceful_tools;
 
 import java.util.stream.Collectors;
 
+import net.minecraftforge.fmlserverevents.FMLServerStartingEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -10,7 +11,7 @@ import com.kwpugh.resourceful_tools.init.BlockInit;
 import com.kwpugh.resourceful_tools.init.ItemInit;
 import com.kwpugh.resourceful_tools.util.GroupResourcefullTools;
 
-import net.minecraft.item.ItemGroup;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
@@ -19,7 +20,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
-import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
 
@@ -28,7 +28,7 @@ public class ResourcefulTools
 {
 	public static final String modid = "resourceful_tools";
 	public static final Logger logger = LogManager.getLogger(modid);
-	public static final ItemGroup resourceful_tools = new GroupResourcefullTools();
+	public static final CreativeModeTab resourceful_tools = new GroupResourcefullTools();
 
     public ResourcefulTools()
     {

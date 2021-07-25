@@ -4,46 +4,48 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.passive.SheepEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemUseContext;
-import net.minecraft.item.Items;
-import net.minecraft.item.SwordItem;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.vector.Vector3d;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.TranslationTextComponent;
-import net.minecraft.world.World;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.animal.Sheep;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.network.chat.Component;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import net.minecraft.world.item.Item.Properties;
+
 public class HookKnife extends SwordItem
 {
-	public HookKnife(IItemTier tier, int attackDamageIn, float attackSpeedIn, Properties builder)
+	public HookKnife(Tier tier, int attackDamageIn, float attackSpeedIn, Properties builder)
 	{
 		super(tier, attackDamageIn, attackSpeedIn, builder);
 	}
 
 	@Override
-	public ActionResultType onItemUse(ItemUseContext context)
+	public InteractionResult useOn(UseOnContext context)
 	{
-		 World world = context.getWorld();
-		 PlayerEntity player = context.getPlayer();
-		 BlockPos pos = context.getPos();
+		 Level world = context.getLevel();
+		 Player player = context.getPlayer();
+		 BlockPos pos = context.getClickedPos();
 		 BlockState state = world.getBlockState(pos);
 		 Block block = state.getBlock();
-		 ItemStack stack = context.getItem();
+		 ItemStack stack = context.getItemInHand();
 	      
 	     if(block == Blocks.WHITE_WOOL ||
 	    		 block == Blocks.BLACK_WOOL ||
@@ -64,26 +66,26 @@ public class HookKnife extends SwordItem
 	    		 )
 	     {
 	    	 world.destroyBlock(pos, false);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.STRING, 4))); 
-	    	 stack.damageItem(1, player, (p_220038_0_) -> {
-		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+	    	 world.addFreshEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.STRING, 4))); 
+	    	 stack.hurtAndBreak(1, player, (p_220038_0_) -> {
+		         p_220038_0_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
 		         });
 	     }
 	     
 	     
-		 return ActionResultType.PASS;
+		 return InteractionResult.PASS;
 	}
 	
-	public boolean onLeftClickEntity(ItemStack stack, PlayerEntity player, Entity entity)
+	public boolean onLeftClickEntity(ItemStack stack, Player player, Entity entity)
 	{
-		if(entity instanceof SheepEntity)
+		if(entity instanceof Sheep)
 		{
-			World world = player.world;
-			Vector3d pos = entity.getPositionVec();
+			Level world = player.level;
+			Vec3 pos = entity.position();
 			
-			 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.STRING, 1))); 
-	    	 stack.damageItem(1, player, (p_220038_0_) -> {
-		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+			 world.addFreshEntity(new ItemEntity(world, pos.x(), pos.y(), pos.z(), new ItemStack(Items.STRING, 1))); 
+	    	 stack.hurtAndBreak(1, player, (p_220038_0_) -> {
+		         p_220038_0_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
 		         });	
 		}
     	 
@@ -101,7 +103,7 @@ public class HookKnife extends SwordItem
     public ItemStack getContainerItem(ItemStack stackIn)
     {
     	ItemStack stack = stackIn.copy();
-    	stack.setDamage(getDamage(stack) + 1);
+    	stack.setDamageValue(getDamage(stack) + 1);
 
         return stack;
     }
@@ -113,10 +115,10 @@ public class HookKnife extends SwordItem
 	}
 	
 	@OnlyIn(Dist.CLIENT)
-	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+	public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
 	{
-		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.resourceful_tools.hook_knife.line1").mergeStyle(TextFormatting.GREEN)));
-		tooltip.add((new TranslationTextComponent("item.resourceful_tools.hook_knife.line2").mergeStyle(TextFormatting.GREEN)));
+		super.appendHoverText(stack, worldIn, tooltip, flagIn);
+		tooltip.add((new TranslatableComponent("item.resourceful_tools.hook_knife.line1").withStyle(ChatFormatting.GREEN)));
+		tooltip.add((new TranslatableComponent("item.resourceful_tools.hook_knife.line2").withStyle(ChatFormatting.GREEN)));
 	}
 }

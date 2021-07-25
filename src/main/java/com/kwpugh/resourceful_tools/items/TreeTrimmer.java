@@ -7,34 +7,36 @@ import javax.annotation.Nullable;
 import com.kwpugh.resourceful_tools.config.ResourcefulToolsConfig;
 import com.kwpugh.resourceful_tools.init.ItemInit;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.item.ShovelItem;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.TranslationTextComponent;
-import net.minecraft.world.World;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ShovelItem;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+
+import net.minecraft.world.item.Item.Properties;
 
 public class TreeTrimmer extends ShovelItem
 {
 
-	public TreeTrimmer(IItemTier tier, float attackDamageIn, float attackSpeedIn, Properties builder)
+	public TreeTrimmer(Tier tier, float attackDamageIn, float attackSpeedIn, Properties builder)
 	{
 		super(tier, attackDamageIn, attackSpeedIn, builder);
 	}
 
-	public boolean onBlockDestroyed(ItemStack stack, World worldIn, BlockState state, BlockPos pos, LivingEntity entityLiving)
+	public boolean mineBlock(ItemStack stack, Level worldIn, BlockState state, BlockPos pos, LivingEntity entityLiving)
 	{
 		double featherChance = ResourcefulToolsConfig.feather_chance.get();
 		double stringChance = ResourcefulToolsConfig.string_chance.get();
@@ -47,102 +49,102 @@ public class TreeTrimmer extends ShovelItem
 		
 		Block block = state.getBlock();
 		
-		if (!worldIn.isRemote)
+		if (!worldIn.isClientSide)
 		{
 			if(block == Blocks.SPRUCE_LEAVES)
 			{
-		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
-		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		        stack.hurtAndBreak(1, entityLiving, (p_220038_0_) -> {
+		            p_220038_0_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
 		         });
 		         	        
-		        double r = random.nextDouble();
+		        double r = worldIn.random.nextDouble();
 		        if (r <= featherChance)
 		        {
-		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.FEATHER, 1)));
+		        	worldIn.addFreshEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.FEATHER, 1)));
 		        }		
 			}	
 			else if(block == Blocks.BIRCH_LEAVES)
 			{
-		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
-		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		        stack.hurtAndBreak(1, entityLiving, (p_220038_0_) -> {
+		            p_220038_0_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
 		         });
 		         	        
-		        double r = random.nextDouble();
+		        double r = worldIn.random.nextDouble();
 		        if (r <= stringChance)
 		        {
-		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.STRING, 1)));
+		        	worldIn.addFreshEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.STRING, 1)));
 		        }			
 			}	
 			else if(block == Blocks.OAK_LEAVES)
 			{
-		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
-		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		        stack.hurtAndBreak(1, entityLiving, (p_220038_0_) -> {
+		            p_220038_0_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
 		         });
 		         		        
-		        double r = random.nextDouble();
+		        double r = worldIn.random.nextDouble();
 		        if (r <= appleChance)
 		        {
-		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.APPLE, 1)));
+		        	worldIn.addFreshEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.APPLE, 1)));
 		        }			
 			}	
 			else if(block == Blocks.ACACIA_LEAVES)
 			{
-		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
-		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		        stack.hurtAndBreak(1, entityLiving, (p_220038_0_) -> {
+		            p_220038_0_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
 		         });
 		         		        
-		        double r = random.nextDouble();
+		        double r = worldIn.random.nextDouble();
 		        if (r <= rabbitChance)
 		        {
-		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.RABBIT_FOOT, 1)));
+		        	worldIn.addFreshEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.RABBIT_FOOT, 1)));
 		        }			
 			}	
 			else if(block == Blocks.JUNGLE_LEAVES)
 			{
-		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
-		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		        stack.hurtAndBreak(1, entityLiving, (p_220038_0_) -> {
+		            p_220038_0_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
 		         });
 		         		        
-		        double r = random.nextDouble();
+		        double r = worldIn.random.nextDouble();
 		        if (r <= spiderEyeChance)
 		        {
-		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.SPIDER_EYE, 1)));
+		        	worldIn.addFreshEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.SPIDER_EYE, 1)));
 		        }			
 			}	
 			else if(block == Blocks.DARK_OAK_LEAVES)
 			{
-		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
-		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		        stack.hurtAndBreak(1, entityLiving, (p_220038_0_) -> {
+		            p_220038_0_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
 		         });
 		         	        
-		        double r = random.nextDouble();
+		        double r = worldIn.random.nextDouble();
 		        if (r <= pearlChance)
 		        {
-		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.PEARL_FRAGMENT.get(), 1)));
+		        	worldIn.addFreshEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.PEARL_FRAGMENT.get(), 1)));
 		        }			
 			}	
 			else if(block == Blocks.TALL_SEAGRASS)
 			{
-				stack.damageItem(1, entityLiving, (p_220038_0_) -> {
-					p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+				stack.hurtAndBreak(1, entityLiving, (p_220038_0_) -> {
+					p_220038_0_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
 				});
 	         
-		        double r = random.nextDouble();
+		        double r = worldIn.random.nextDouble();
 		        if (r <= crystalChance)
 		        {
-		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.PRISMARINE_CRYSTALS, 1)));
+		        	worldIn.addFreshEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.PRISMARINE_CRYSTALS, 1)));
 		        } 	
 			}		
 			else if(block == Blocks.KELP_PLANT)
 			{
-		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
-		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		        stack.hurtAndBreak(1, entityLiving, (p_220038_0_) -> {
+		            p_220038_0_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
 		         });
 		         
-		        double r = random.nextDouble();
+		        double r = worldIn.random.nextDouble();
 		        if (r <= shardChance)
 		        {
-		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.PRISMARINE_SHARD, 1)));
+		        	worldIn.addFreshEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.PRISMARINE_SHARD, 1)));
 		        }
 			}
 		
@@ -155,8 +157,8 @@ public class TreeTrimmer extends ShovelItem
 					!(block == Blocks.TALL_SEAGRASS) || 
 					!(block == Blocks.KELP_PLANT))
 			{
-		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
-		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		        stack.hurtAndBreak(1, entityLiving, (p_220038_0_) -> {
+		            p_220038_0_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
 		         });	
 			}
 		}
@@ -165,9 +167,9 @@ public class TreeTrimmer extends ShovelItem
 	} 
 
 	@OnlyIn(Dist.CLIENT)
-	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+	public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
 	{
-		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.resourceful_tools.tree_trimmer.line1").mergeStyle(TextFormatting.GREEN)));
+		super.appendHoverText(stack, worldIn, tooltip, flagIn);
+		tooltip.add((new TranslatableComponent("item.resourceful_tools.tree_trimmer.line1").withStyle(ChatFormatting.GREEN)));
 	}
 }
