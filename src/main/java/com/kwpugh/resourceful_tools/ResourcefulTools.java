@@ -2,7 +2,7 @@ package com.kwpugh.resourceful_tools;
 
 import java.util.stream.Collectors;
 
-import net.minecraftforge.fmlserverevents.FMLServerStartingEvent;
+import net.minecraftforge.event.server.ServerStartingEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -68,7 +68,7 @@ public class ResourcefulTools
     }
 
     @SubscribeEvent
-    public void onServerStarting(FMLServerStartingEvent event)
+    public void onServerStarting(ServerStartingEvent event)
     {
     	logger.info("ResourcefulTools server setup");
     }
