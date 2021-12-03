@@ -50,6 +50,18 @@ public class ItemInit
 	public static final RegistryObject<Item> NETHERRACK_SINGLE = ITEMS.register("netherrack_single", () -> new BlockItem(BlockInit.NETHERRACK_SINGLE.get(), new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> NETHERRACK_DOUBLE = ITEMS.register("netherrack_double", () -> new BlockItem(BlockInit.NETHERRACK_DOUBLE.get(), new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> NETHERRACK_TRIPLE = ITEMS.register("netherrack_triple", () -> new BlockItem(BlockInit.NETHERRACK_TRIPLE.get(), new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
+
+	public static final RegistryObject<Item> BASALT_SINGLE = ITEMS.register("basalt_single", () -> new BlockItem(BlockInit.BASALT_SINGLE.get(), new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> BASALT_DOUBLE = ITEMS.register("basalt_double", () -> new BlockItem(BlockInit.BASALT_DOUBLE.get(), new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> BASALT_TRIPLE = ITEMS.register("basalt_triple", () -> new BlockItem(BlockInit.BASALT_TRIPLE.get(), new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
+
+	public static final RegistryObject<Item> COBBLED_DEEPSLATE_SINGLE = ITEMS.register("cobbled_deepslate_single", () -> new BlockItem(BlockInit.COBBLED_DEEPSLATE_SINGLE.get(), new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> COBBLED_DEEPSLATE_DOUBLE = ITEMS.register("cobbled_deepslate_double", () -> new BlockItem(BlockInit.COBBLED_DEEPSLATE_DOUBLE.get(), new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> COBBLED_DEEPSLATE_TRIPLE = ITEMS.register("cobbled_deepslate_triple", () -> new BlockItem(BlockInit.COBBLED_DEEPSLATE_TRIPLE.get(), new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
+
+	public static final RegistryObject<Item> TUFF_SINGLE = ITEMS.register("tuff_single", () -> new BlockItem(BlockInit.TUFF_SINGLE.get(), new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> TUFF_DOUBLE = ITEMS.register("tuff_double", () -> new BlockItem(BlockInit.TUFF_DOUBLE.get(), new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> TUFF_TRIPLE = ITEMS.register("tuff_triple", () -> new BlockItem(BlockInit.TUFF_TRIPLE.get(), new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
 	
 	public static final RegistryObject<Item> HAND_TILLER = ITEMS.register("hand_tiller", () -> new HandTiller(Tiers.IRON, -2, -3, new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> HOOK_KNIFE = ITEMS.register("hook_knife", () -> new HookKnife(Tiers.IRON, -2, -3, new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
