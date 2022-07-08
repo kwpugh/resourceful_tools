@@ -160,6 +160,15 @@
 
 	"block.resourceful_tools.basalt_triple": "Triple Compressed Basalt",
 	"item.resourceful_tools.basalt_triple": "Triple Compressed Basalt",
+
+	"block.resourceful_tools.stone_single": "Compressed Stone",
+	"item.resourceful_tools.stone_single": "Compressed Stone",
+
+	"block.resourceful_tools.stone_double": "Double Compressed Stone",
+	"item.resourceful_tools.stone_double": "Double Compressed Stone",
+
+	"block.resourceful_tools.stone_triple": "Triple Compressed Stone",
+	"item.resourceful_tools.stone_triple": "Triple Compressed Stone",
 		
 	"itemGroup.resourceful_tools": "Resourceful Tools"
 }

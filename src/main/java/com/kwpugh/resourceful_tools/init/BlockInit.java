@@ -34,7 +34,11 @@ public final class BlockInit
 	public static final RegistryObject<Block> COBBLESTONE_SINGLE = BLOCKS.register("cobblestone_single", () -> new Block(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(1.0F, 1.0F).sound(SoundType.STONE)));
 	public static final RegistryObject<Block> COBBLESTONE_DOUBLE = BLOCKS.register("cobblestone_double", () -> new Block(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(1.0F, 1.0F).sound(SoundType.STONE)));
 	public static final RegistryObject<Block> COBBLESTONE_TRIPLE = BLOCKS.register("cobblestone_triple", () -> new Block(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(1.0F, 1.0F).sound(SoundType.STONE)));
-	
+
+	public static final RegistryObject<Block> STONE_SINGLE = BLOCKS.register("stone_single", () -> new Block(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(1.0F, 1.0F).sound(SoundType.STONE)));
+	public static final RegistryObject<Block> STONE_DOUBLE = BLOCKS.register("stone_double", () -> new Block(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(1.0F, 1.0F).sound(SoundType.STONE)));
+	public static final RegistryObject<Block> STONE_TRIPLE = BLOCKS.register("stone_triple", () -> new Block(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(1.0F, 1.0F).sound(SoundType.STONE)));
+
 	public static final RegistryObject<Block> ANDESITE_SINGLE = BLOCKS.register("andesite_single", () -> new Block(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(1.0F, 1.0F).sound(SoundType.STONE)));
 	public static final RegistryObject<Block> ANDESITE_DOUBLE = BLOCKS.register("andesite_double", () -> new Block(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(1.0F, 1.0F).sound(SoundType.STONE)));
 	public static final RegistryObject<Block> ANDESITE_TRIPLE = BLOCKS.register("andesite_triple", () -> new Block(Block.Properties.of(Material.DIRT, MaterialColor.DIRT).strength(1.0F, 1.0F).sound(SoundType.STONE)));

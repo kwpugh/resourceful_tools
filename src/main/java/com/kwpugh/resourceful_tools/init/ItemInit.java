@@ -34,7 +34,11 @@ public class ItemInit
 	public static final RegistryObject<Item> COBBLESTONE_SINGLE = ITEMS.register("cobblestone_single", () -> new BlockItem(BlockInit.COBBLESTONE_SINGLE.get(), new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> COBBLESTONE_DOUBLE = ITEMS.register("cobblestone_double", () -> new BlockItem(BlockInit.COBBLESTONE_DOUBLE.get(), new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> COBBLESTONE_TRIPLE = ITEMS.register("cobblestone_triple", () -> new BlockItem(BlockInit.COBBLESTONE_TRIPLE.get(), new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
-	
+
+	public static final RegistryObject<Item> STONE_SINGLE = ITEMS.register("stone_single", () -> new BlockItem(BlockInit.STONE_SINGLE.get(), new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> STONE_DOUBLE = ITEMS.register("stone_double", () -> new BlockItem(BlockInit.STONE_DOUBLE.get(), new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> STONE_TRIPLE = ITEMS.register("stone_triple", () -> new BlockItem(BlockInit.STONE_TRIPLE.get(), new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
+
 	public static final RegistryObject<Item> ANDESITE_SINGLE = ITEMS.register("andesite_single", () -> new BlockItem(BlockInit.ANDESITE_SINGLE.get(), new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> ANDESITE_DOUBLE = ITEMS.register("andesite_double", () -> new BlockItem(BlockInit.ANDESITE_DOUBLE.get(), new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> ANDESITE_TRIPLE = ITEMS.register("andesite_triple", () -> new BlockItem(BlockInit.ANDESITE_TRIPLE.get(), new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
