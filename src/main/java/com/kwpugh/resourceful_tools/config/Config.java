@@ -17,6 +17,8 @@ public class Config {
 	
 	static
 	{
+		com.electronwill.nightconfig.core.Config.setInsertionOrderPreserved(true);
+
 		ResourcefulToolsConfig.init(builder);
 		
 		config = builder.build();
