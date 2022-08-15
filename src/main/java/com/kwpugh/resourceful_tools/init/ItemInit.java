@@ -89,6 +89,7 @@ public class ItemInit
 	public static final RegistryObject<Item> JERKY = ITEMS.register("jerky", () -> new Item(new Item.Properties().food(FoodList.jerky).tab(ResourcefulTools.resourceful_tools)));
 
 	public static final RegistryObject<Item> REAM_OF_PAPER = ITEMS.register("ream_of_paper", () -> new Item(new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> TRASH_CAN = ITEMS.register("trash_can", () -> new TrashCan(new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
 
 	public static final RegistryObject<Item> WELLSPRING = ITEMS.register("wellspring", () -> new BlockItem(BlockInit.WELLSPRING.get(), new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> LAVASPRING = ITEMS.register("lavaspring", () -> new BlockItem(BlockInit.LAVASPRING.get(), new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
