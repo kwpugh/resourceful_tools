@@ -29,11 +29,39 @@ public class ResourcefulToolsConfig
 	public static ForgeConfigSpec.IntValue jerky_hunger;
 	public static ForgeConfigSpec.DoubleValue jerky_saturation;
 
+	public static ForgeConfigSpec.IntValue hand_scraper_durability;
+	public static ForgeConfigSpec.IntValue hand_scraper_copper_durability;
+
+	public static ForgeConfigSpec.IntValue copper_tool_durability;
+	public static ForgeConfigSpec.DoubleValue copper_tool_efficiency;
+	public static ForgeConfigSpec.DoubleValue copper_tool_attack;
+	public static ForgeConfigSpec.IntValue copper_tool_enchantability;
+
 	public static ForgeConfigSpec.Builder server_output;
 	
 	
 	public static void init(ForgeConfigSpec.Builder server)
-	{	
+	{
+		copper_tool_durability = server
+				.comment("Copper Tool Durability [250-3000, default: 525]")
+				.defineInRange("copperToolDurability", 128, 1, 512);
+		copper_tool_efficiency = server
+				.comment("Copper Tool efficiency [1.0-7.0, default: 4.5]")
+				.defineInRange("copperToolEfficiency", 4.5, 0.0, 7.0);
+		copper_tool_attack = server
+				.comment("Copper attack damage [1-40, default: 2.0]")
+				.defineInRange("copperAttackDamage", 2.0, 0.0, 40.0);
+		copper_tool_enchantability = server
+				.comment("Copper tool enchantability [1-30, default: 18]")
+				.defineInRange("copperEnchantability", 18, 1, 30);
+
+		hand_scraper_durability = server
+				.comment("Max durability of Iron Hand Scraper")
+				.defineInRange("hand_scraper_durability", 250, 1, 512);
+		hand_scraper_copper_durability = server
+				.comment("Max durability of Copper Hand Scraper")
+				.defineInRange("hand_scraper_copper_durability", 128, 1, 512);
+
 		bone_fragment_chance = server
 				.comment("Chance to drop bone fragment from Gravel with Hand Tiller")
 				.defineInRange("bone_fragment_chance", 0.20, 0.0, 1.0);

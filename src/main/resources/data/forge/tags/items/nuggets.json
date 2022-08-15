@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#forge:nuggests/ender_pearl"
+    "#forge:nuggets/ender_pearl",
+    "#forge:nuggets/copper_nugget"
   ]
 }

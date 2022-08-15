@@ -4,23 +4,28 @@
 	"item.resourceful_tools.glass_placer.line1": "Place a glass block in the air, where the player is looking",
 	"item.resourceful_tools.glass_placer.line2": "Right-click to use.",
 
-	"item.resourceful_tools.hand_tiller": "Hand Tiller",
+	"item.resourceful_tools.hand_tiller": "Iron Hand Tiller",
+	"item.resourceful_tools.hand_tiller_copper": "Copper Hand Tiller",
 	"item.resourceful_tools.hand_tiller.line1":"Used to obtain resources from Clay and Gravel",
 	"item.resourceful_tools.hand_tiller.jei_info.line1":"Use on gravel to get a chance of a bone fragment and on clay for a chance of an ink sac",
 	
-	"item.resourceful_tools.hook_knife": "Hook Knife",
+	"item.resourceful_tools.hook_knife": "Iron Hook Knife",
+	"item.resourceful_tools.hook_knife_copper": "Copper Hook Knife",
 	"item.resourceful_tools.hook_knife.line1": "Used to get string from Sheep without harming",
 	"item.resourceful_tools.hook_knife.line2": "Use on wool blocks to drop string",
 	
-	"item.resourceful_tools.hand_pick": "Hand Pick",
+	"item.resourceful_tools.hand_pick": "Iron Hand Pick",
+	"item.resourceful_tools.hand_pick_copper": "Copper Hand Pick",
 	"item.resourceful_tools.hand_pick.line1":"Used to obtain resources from several types of stones",
 	"item.resourceful_tools.hand_pick.jei_info.line1":"Used to obtain resources from several types of stones: \n Sandstone -> Saltpeter \n Netherrack -> Sulfur \n Magma Block -> Small Pile of Blaze Powder \n Nether Quartz -> Ghast Tear Fragment \n Blackstone -> Netherite Fragment \n End Stone -> Nether Star Fragment",
 	
-	"item.resourceful_tools.hand_scraper": "Hand Scraper",
+	"item.resourceful_tools.hand_scraper": "Iron Hand Scraper",
+	"item.resourceful_tools.hand_scraper_copper": "Copper Hand Scraper",
 	"item.resourceful_tools.hand_scrapper.line1":"Used on Bamboo to make sheets",
 	"item.resourceful_tools.hand_scrapper.line2":"Use in a crafting table",
 	
-	"item.resourceful_tools.tree_trimmer": "Hand Trimmer",
+	"item.resourceful_tools.tree_trimmer": "Iron Hand Trimmer",
+	"item.resourceful_tools.tree_trimmer_copper": "Copper Hand Trimmer",
 	"item.resourceful_tools.tree_trimmer.line1": "Used to obtain resources from leaves and sea plants",
 	"item.resourceful_tools.tree_trimmer.jei_info.line1":"Use on various blocks for a chance to obtain the following drops: \n Spruce Leaves -> Feather \n Birch Leaves -> String \n Oak Leaves -> Apple \n Acacia Leaves -> Rabbit Foot \n Jungle Leaves -> Spider Eye \n Azela Leaves -> Phamtom Membrane \n Dark Oak Leaves -> Ender Pearl Fragment \n Tall Seagrass -> Prismarine Crystal \n Kelp Plant - > Prismarine Shard \n Hay Block - > Egg",
 	
@@ -39,12 +44,14 @@
 	
 	"item.resourceful_tools.ream_of_paper": "Ream of Paper",
 
-	"item.resourceful_tools.clam_digger": "Clam Digger",
+	"item.resourceful_tools.clam_digger": "Iron Clam Digger",
+	"item.resourceful_tools.clam_digger_copper": "Copper Clam Digger",
 	"item.resourceful_tools.clam_digger.line1": "Used to obtain clams from sand in beach biomes",
 	"item.resourceful_tools.clam": "Clam",
 	"item.resourceful_tools.raw_clam": "Raw Clam",
 	"item.resourceful_tools.cooked_clam": "Cooked Clam",
 	"item.resourceful_tools.jerky": "Jerky",
+	"item.resourceful_tools.copper_nugget": "Copper Nugget",
 
 	"item.resourceful_tools.trash_can": "Trash Can",
 	"item.resourceful_tools.trash_can.line1": "A handy item that provides a trash chest",

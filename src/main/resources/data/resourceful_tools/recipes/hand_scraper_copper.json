@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        " C ",
+        " CC",
+        "A  "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "minecraft:stick"
+        },
+        "C":
+        {
+            "item": "resourceful_tools:copper_nugget"
+        }
+    },
+    
+    "result":
+    {
+        "item": "resourceful_tools:hand_scraper_copper",
+        "count": 1
+    }
+}
