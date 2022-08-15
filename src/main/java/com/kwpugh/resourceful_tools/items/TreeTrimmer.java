@@ -37,7 +37,9 @@ public class TreeTrimmer extends ShovelItem
 		double pearlChance = ResourcefulToolsConfig.pearl_fragment_chance.get();
 		double crystalChance = ResourcefulToolsConfig.prismarine_crystal_chance.get();
 		double shardChance = ResourcefulToolsConfig.prismarine_shard_chance.get();
-		
+		double membraneChance  = ResourcefulToolsConfig.membbrane_chance.get();
+		double eggChance = ResourcefulToolsConfig.egg_chance.get();
+
 		Block block = state.getBlock();
 		
 		if (!worldIn.isClientSide)
@@ -113,7 +115,31 @@ public class TreeTrimmer extends ShovelItem
 		        {
 		        	worldIn.addFreshEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.PEARL_FRAGMENT.get(), 1)));
 		        }			
-			}	
+			}
+			else if(block == Blocks.AZALEA_LEAVES  || block == Blocks.FLOWERING_AZALEA_LEAVES)
+			{
+				stack.hurtAndBreak(1, entityLiving, (p_220038_0_) -> {
+					p_220038_0_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
+				});
+
+				double r = worldIn.random.nextDouble();
+				if (r <= membraneChance)
+				{
+					worldIn.addFreshEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.PHANTOM_MEMBRANE, 1)));
+				}
+			}
+			else if(block == Blocks.HAY_BLOCK)
+			{
+				stack.hurtAndBreak(1, entityLiving, (p_220038_0_) -> {
+					p_220038_0_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
+				});
+
+				double r = worldIn.random.nextDouble();
+				if (r <= eggChance)
+				{
+					worldIn.addFreshEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.EGG, 1)));
+				}
+			}
 			else if(block == Blocks.TALL_SEAGRASS)
 			{
 				stack.hurtAndBreak(1, entityLiving, (p_220038_0_) -> {
@@ -144,7 +170,10 @@ public class TreeTrimmer extends ShovelItem
 					!(block == Blocks.OAK_LEAVES) || 
 					!(block == Blocks.ACACIA_LEAVES) || 
 					!(block == Blocks.JUNGLE_LEAVES) || 
-					!(block == Blocks.DARK_OAK_LEAVES) || 
+					!(block == Blocks.DARK_OAK_LEAVES) ||
+					!(block == Blocks.AZALEA_LEAVES) ||
+					!(block == Blocks.FLOWERING_AZALEA_LEAVES) ||
+					!(block == Blocks.HAY_BLOCK) ||
 					!(block == Blocks.TALL_SEAGRASS) || 
 					!(block == Blocks.KELP_PLANT))
 			{

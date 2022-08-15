@@ -21,7 +21,14 @@ public class ResourcefulToolsConfig
 	public static ForgeConfigSpec.DoubleValue pearl_fragment_chance;
 	public static ForgeConfigSpec.DoubleValue prismarine_crystal_chance;
 	public static ForgeConfigSpec.DoubleValue prismarine_shard_chance;
-	
+	public static ForgeConfigSpec.DoubleValue membbrane_chance;
+	public static ForgeConfigSpec.DoubleValue egg_chance;
+	public static ForgeConfigSpec.DoubleValue clam_chance;
+	public static ForgeConfigSpec.IntValue cooked_clam_hunger;
+	public static ForgeConfigSpec.DoubleValue cooked_clam_saturation;
+	public static ForgeConfigSpec.IntValue jerky_hunger;
+	public static ForgeConfigSpec.DoubleValue jerky_saturation;
+
 	public static ForgeConfigSpec.Builder server_output;
 	
 	
@@ -90,5 +97,33 @@ public class ResourcefulToolsConfig
 		prismarine_shard_chance = server
 				.comment("Chance to drop prismarine shard from Kelp Plant with Hand Trimmer")
 				.defineInRange("prismarine_shard_chance", 0.15, 0.0, 1.0);
+
+		membbrane_chance = server
+				.comment("Chance to drop phantom membrane shard from Azela Leaves with Hand Trimmer")
+				.defineInRange("membrane_chance", 0.1, 0.0, 1.0);
+
+		egg_chance = server
+				.comment("Chance to drop eggs from Hay block with Hand Trimmer")
+				.defineInRange("egg_chance", 0.1, 0.0, 1.0);
+
+		clam_chance = server
+				.comment("Chance to drop clams from Sand with Clam Digger")
+				.defineInRange("clam_chance", 0.1, 0.0, 1.0);
+
+		cooked_clam_hunger = server
+				.comment("Hunger value:")
+				.defineInRange("cooked_clam_hunger", 6, 0, 30);
+
+		cooked_clam_saturation = server
+				.comment("Saturation value:")
+				.defineInRange("cooked_clam_saturation", 0.8, 0.0, 10.0);
+
+		jerky_hunger = server
+				.comment("Hunger value:")
+				.defineInRange("jerky_hunger", 6, 0, 30);
+
+		jerky_saturation = server
+				.comment("Saturation value:")
+				.defineInRange("jerky_saturation", 0.8, 0.0, 10.0);
 	}
 }

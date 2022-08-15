@@ -1,12 +1,8 @@
 package com.kwpugh.resourceful_tools.init;
 
+import com.kwpugh.resourceful_tools.lists.FoodList;
 import com.kwpugh.resourceful_tools.ResourcefulTools;
-import com.kwpugh.resourceful_tools.items.GlassPlacer;
-import com.kwpugh.resourceful_tools.items.HandPick;
-import com.kwpugh.resourceful_tools.items.HandScraper;
-import com.kwpugh.resourceful_tools.items.HandTiller;
-import com.kwpugh.resourceful_tools.items.HookKnife;
-import com.kwpugh.resourceful_tools.items.TreeTrimmer;
+import com.kwpugh.resourceful_tools.items.*;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -73,6 +69,7 @@ public class ItemInit
 	public static final RegistryObject<Item> HAND_SCRAPPER = ITEMS.register("hand_scraper", () -> new HandScraper(new Item.Properties().durability(128).setNoRepair().tab(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> TREE_TRIMMER = ITEMS.register("tree_trimmer", () -> new TreeTrimmer(Tiers.IRON, -2, -3, new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> GLASS_PLACER = ITEMS.register("glass_placer", () -> new GlassPlacer(new Item.Properties().durability(8).tab(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> CLAM_DIGGER = ITEMS.register("clam_digger", () -> new ClamDigger(Tiers.IRON, -2, -3, new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
 
 	public static final RegistryObject<Item> POWDER_SULFUR = ITEMS.register("powder_sulfur", () -> new Item(new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> POWDER_SALTPETER = ITEMS.register("powder_saltpeter", () -> new Item(new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
@@ -86,6 +83,10 @@ public class ItemInit
 	
 	public static final RegistryObject<Item> BAMBOO_SHEET = ITEMS.register("bamboo_sheet", () -> new Item(new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> LARGE_BAMBOO_SHEET = ITEMS.register("large_bamboo_sheet", () -> new Item(new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> CLAM = ITEMS.register("clam", () -> new Item(new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> RAW_CLAM = ITEMS.register("raw_clam", () -> new Item(new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> COOKED_CLAM = ITEMS.register("cooked_clam", () -> new Item(new Item.Properties().food(FoodList.cookedClam).tab(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> JERKY = ITEMS.register("jerky", () -> new Item(new Item.Properties().food(FoodList.jerky).tab(ResourcefulTools.resourceful_tools)));
 
 	public static final RegistryObject<Item> REAM_OF_PAPER = ITEMS.register("ream_of_paper", () -> new Item(new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
 
