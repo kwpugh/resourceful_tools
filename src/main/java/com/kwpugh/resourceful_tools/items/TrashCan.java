@@ -38,9 +38,9 @@ public class TrashCan extends Item
     }
 
     @OnlyIn(Dist.CLIENT)
-    public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
+    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flagIn)
     {
-        super.appendHoverText(stack, worldIn, tooltip, flagIn);
+        super.appendHoverText(stack, level, tooltip, flagIn);
         tooltip.add((Component.translatable("item.resourceful_tools.trash_can.line1").withStyle(ChatFormatting.GREEN)));
         tooltip.add((Component.translatable("item.resourceful_tools.trash_can.line2").withStyle(ChatFormatting.RED)));
     }

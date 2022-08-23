@@ -32,9 +32,9 @@ public class GlassPlacer extends Item
 
 	//Places a glass block where the player is looking, think Angel block
 	@Nonnull
-	public InteractionResultHolder<ItemStack> use(Level world, Player player,@Nonnull InteractionHand hand)
+	public InteractionResultHolder<ItemStack> use(Level level, Player player,@Nonnull InteractionHand hand)
 	{			
-		if (!world.isClientSide)
+		if (!level.isClientSide)
 		{			
 			ItemStack stack = player.getMainHandItem();
 			
@@ -46,9 +46,9 @@ public class GlassPlacer extends Item
 			Block glassBlock = Blocks.GLASS;
 			BlockState glassDefaultState = glassBlock.defaultBlockState();	      
       
-			if (world.isEmptyBlock(pos) || !world.getFluidState(pos).isEmpty())
+			if (level.isEmptyBlock(pos) || !level.getFluidState(pos).isEmpty())
 			{
-				world.setBlockAndUpdate(pos, glassDefaultState);
+				level.setBlockAndUpdate(pos, glassDefaultState);
 				stack.hurtAndBreak(1, player, (p_220038_0_) -> {
 			         p_220038_0_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
 			         });
@@ -58,9 +58,9 @@ public class GlassPlacer extends Item
 	}
 	
 	@OnlyIn(Dist.CLIENT)
-	public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
+	public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flagIn)
 	{
-		super.appendHoverText(stack, worldIn, tooltip, flagIn);
+		super.appendHoverText(stack, level, tooltip, flagIn);
 		tooltip.add((Component.translatable("item.resourceful_tools.glass_placer.line1").withStyle(ChatFormatting.GREEN)));
 		tooltip.add((Component.translatable("item.resourceful_tools.glass_placer.line2").withStyle(ChatFormatting.YELLOW)));
 	}

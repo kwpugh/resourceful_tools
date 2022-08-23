@@ -37,11 +37,17 @@ public class ResourcefulToolsConfig
 	public static ForgeConfigSpec.DoubleValue copper_tool_attack;
 	public static ForgeConfigSpec.IntValue copper_tool_enchantability;
 
+	public static ForgeConfigSpec.DoubleValue anvil_damage_chance;
+
 	public static ForgeConfigSpec.Builder server_output;
 	
 	
 	public static void init(ForgeConfigSpec.Builder server)
 	{
+		anvil_damage_chance = server
+				.comment("Chance of anvil taking damage on use. [0.0 - 1.0, default: 0.0]")
+				.defineInRange("anvil_damage_chance", 0.0, 0.0, 1.0);
+
 		copper_tool_durability = server
 				.comment("Copper Tool Durability [250-3000, default: 525]")
 				.defineInRange("copperToolDurability", 128, 1, 512);
