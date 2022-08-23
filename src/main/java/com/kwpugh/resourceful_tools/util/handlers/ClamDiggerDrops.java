@@ -3,6 +3,7 @@ package com.kwpugh.resourceful_tools.util.handlers;
 import com.kwpugh.resourceful_tools.config.ResourcefulToolsConfig;
 import com.kwpugh.resourceful_tools.init.ItemInit;
 import net.minecraft.core.BlockPos;
+import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
@@ -22,8 +23,7 @@ public class ClamDiggerDrops
 
         if (!level.isClientSide)
         {
-            if(block == Blocks.SAND)
-            //if(block == Blocks.SAND && level.getBiome(pos).is(BiomeTags.IS_BEACH))
+            if(block == Blocks.SAND && level.getBiome(pos).is(BiomeTags.IS_BEACH))
             {
                 stack.hurtAndBreak(1, player, (p_220038_0_) -> {
                     p_220038_0_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
