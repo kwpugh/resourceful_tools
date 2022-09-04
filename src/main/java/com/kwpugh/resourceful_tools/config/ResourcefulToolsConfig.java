@@ -24,10 +24,17 @@ public class ResourcefulToolsConfig
 	public static ForgeConfigSpec.DoubleValue membbrane_chance;
 	public static ForgeConfigSpec.DoubleValue egg_chance;
 	public static ForgeConfigSpec.DoubleValue clam_chance;
+	public static ForgeConfigSpec.DoubleValue acorn_chance;
+	public static ForgeConfigSpec.DoubleValue acorn_dark_chance;
+
 	public static ForgeConfigSpec.IntValue cooked_clam_hunger;
 	public static ForgeConfigSpec.DoubleValue cooked_clam_saturation;
 	public static ForgeConfigSpec.IntValue jerky_hunger;
 	public static ForgeConfigSpec.DoubleValue jerky_saturation;
+	public static ForgeConfigSpec.IntValue acorn_hunger;
+	public static ForgeConfigSpec.DoubleValue acorn_saturation;
+	public static ForgeConfigSpec.IntValue acorn_dark_hunger;
+	public static ForgeConfigSpec.DoubleValue acorn_dark_saturation;
 
 	public static ForgeConfigSpec.IntValue hand_scraper_durability;
 	public static ForgeConfigSpec.IntValue hand_scraper_copper_durability;
@@ -111,7 +118,15 @@ public class ResourcefulToolsConfig
 		apple_chance = server
 				.comment("Chance to drop apple from Oak Leaves with Hand Trimmer")
 				.defineInRange("apple_chance", 0.25, 0.0, 1.0);
-	
+
+		acorn_chance = server
+				.comment("Chance to drop acorn from Oak Leaves with Hand Trimmer")
+				.defineInRange("acorn_chance", 0.05, 0.0, 1.0);
+
+		acorn_dark_chance = server
+				.comment("Chance to drop acorn from Dark Oak Leaves with Hand Trimmer")
+				.defineInRange("acorn_dark_chance", 0.05, 0.0, 1.0);
+
 		rabbit_chance = server
 				.comment("Chance to drop rabbit foot from Acacia Leaves with Hand Trimmer")
 				.defineInRange("rabbit_chance", 0.05, 0.0, 1.0);
@@ -159,5 +174,21 @@ public class ResourcefulToolsConfig
 		jerky_saturation = server
 				.comment("Saturation value:")
 				.defineInRange("jerky_saturation", 0.8, 0.0, 10.0);
+
+		acorn_hunger = server
+				.comment("Hunger value:")
+				.defineInRange("acorn_hunger", 7, 0, 30);
+
+		acorn_saturation = server
+				.comment("Saturation value:")
+				.defineInRange("acorn_saturation", 0.9, 0.0, 10.0);
+
+		acorn_dark_hunger = server
+				.comment("Hunger value:")
+				.defineInRange("acorn_dark_hunger", 7, 0, 30);
+
+		acorn_dark_saturation = server
+				.comment("Saturation value:")
+				.defineInRange("acorn_dark_saturation", 0.9, 0.0, 10.0);
 	}
 }

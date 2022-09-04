@@ -25,6 +25,8 @@ public class TreeTrimmerDrops
     static double shardChance = ResourcefulToolsConfig.prismarine_shard_chance.get();
     static double membraneChance  = ResourcefulToolsConfig.membbrane_chance.get();
     static double eggChance = ResourcefulToolsConfig.egg_chance.get();
+    static double acornChance = ResourcefulToolsConfig.acorn_chance.get();
+    static double acornDarkChance = ResourcefulToolsConfig.acorn_dark_chance.get();
 
     public static void dropItems(Level level, Player player, BlockPos pos, BlockState state, ItemStack stack)
     {
@@ -67,6 +69,11 @@ public class TreeTrimmerDrops
                 {
                     level.addFreshEntity(new ItemEntity(level, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.APPLE, 1)));
                 }
+
+                if (r <= acornChance)
+                {
+                    level.addFreshEntity(new ItemEntity(level, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.ACORN.get(), 1)));
+                }
             }
             else if(block == Blocks.ACACIA_LEAVES)
             {
@@ -102,6 +109,11 @@ public class TreeTrimmerDrops
                 if (r <= pearlChance)
                 {
                     level.addFreshEntity(new ItemEntity(level, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.PEARL_FRAGMENT.get(), 1)));
+                }
+
+                if (r <= acornDarkChance)
+                {
+                    level.addFreshEntity(new ItemEntity(level, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.ACORN_DARK.get(), 1)));
                 }
             }
             else if(block == Blocks.AZALEA_LEAVES  || block == Blocks.FLOWERING_AZALEA_LEAVES)

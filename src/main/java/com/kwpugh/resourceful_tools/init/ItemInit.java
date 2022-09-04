@@ -93,12 +93,15 @@ public class ItemInit
 
 	public static final RegistryObject<Item> BAMBOO_SHEET = ITEMS.register("bamboo_sheet", () -> new Item(new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> LARGE_BAMBOO_SHEET = ITEMS.register("large_bamboo_sheet", () -> new Item(new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> REAM_OF_PAPER = ITEMS.register("ream_of_paper", () -> new Item(new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
+
 	public static final RegistryObject<Item> CLAM = ITEMS.register("clam", () -> new Item(new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> RAW_CLAM = ITEMS.register("raw_clam", () -> new Item(new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> COOKED_CLAM = ITEMS.register("cooked_clam", () -> new Item(new Item.Properties().food(FoodList.cookedClam).tab(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> JERKY = ITEMS.register("jerky", () -> new Item(new Item.Properties().food(FoodList.jerky).tab(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> ACORN = ITEMS.register("acorn", () -> new Item(new Item.Properties().food(FoodList.jerky).tab(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> ACORN_DARK = ITEMS.register("acorn_dark", () -> new Item(new Item.Properties().food(FoodList.jerky).tab(ResourcefulTools.resourceful_tools)));
 
-	public static final RegistryObject<Item> REAM_OF_PAPER = ITEMS.register("ream_of_paper", () -> new Item(new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> TRASH_CAN = ITEMS.register("trash_can", () -> new TrashCan(new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
 
 	public static final RegistryObject<Item> WELLSPRING = ITEMS.register("wellspring", () -> new BlockItem(BlockInit.WELLSPRING.get(), new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
