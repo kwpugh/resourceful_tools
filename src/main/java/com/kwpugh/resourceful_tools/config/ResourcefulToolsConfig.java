@@ -24,6 +24,7 @@ public class ResourcefulToolsConfig
 	public static ForgeConfigSpec.DoubleValue membbrane_chance;
 	public static ForgeConfigSpec.DoubleValue egg_chance;
 	public static ForgeConfigSpec.DoubleValue clam_chance;
+	public static ForgeConfigSpec.DoubleValue bit_o_slime_chance;
 	public static ForgeConfigSpec.DoubleValue acorn_chance;
 	public static ForgeConfigSpec.DoubleValue acorn_dark_chance;
 
@@ -154,6 +155,10 @@ public class ResourcefulToolsConfig
 		egg_chance = server
 				.comment("Chance to drop eggs from Hay block with Hand Trimmer")
 				.defineInRange("egg_chance", 0.1, 0.0, 1.0);
+
+		bit_o_slime_chance = server
+				.comment("Chance to drop Bit o' Slime from Rooted Dirt with Tiller")
+				.defineInRange("bit_o_slime_chance", 0.2, 0.0, 1.0);
 
 		clam_chance = server
 				.comment("Chance to drop clams from Sand with Clam Digger")

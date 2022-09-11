@@ -17,6 +17,7 @@ public class HandTillerDrops
 {
     static double boneFragmentChance = ResourcefulToolsConfig.bone_fragment_chance.get();
     static double inkSacChance = ResourcefulToolsConfig.ink_sac_chance.get();
+    static double bitSlimeChance = ResourcefulToolsConfig.bit_o_slime_chance.get();
 
     public static void dropItems(Level level, Player player, BlockPos pos, BlockState state, ItemStack stack)
     {
@@ -48,8 +49,20 @@ public class HandTillerDrops
                     level.addFreshEntity(new ItemEntity(level, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.INK_SAC, 1)));
                 }
             }
+            else if(block == Blocks.ROOTED_DIRT)
+            {
+                stack.hurtAndBreak(1, player, (p_220038_0_) -> {
+                    p_220038_0_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
+                });
 
-            if(!(block == Blocks.CLAY) || !(block == Blocks.GRAVEL))
+                double r = level.random.nextDouble();
+                if (r <= bitSlimeChance)
+                {
+                    level.addFreshEntity(new ItemEntity(level, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.BIT_O_SlIME.get(), 1)));
+                }
+            }
+
+            if(!(block == Blocks.CLAY) || !(block == Blocks.GRAVEL) || !(block == Blocks.ROOTED_DIRT))
             {
                 stack.hurtAndBreak(1, player, (p_220038_0_) -> {
                     p_220038_0_.broadcastBreakEvent(EquipmentSlot.MAINHAND);

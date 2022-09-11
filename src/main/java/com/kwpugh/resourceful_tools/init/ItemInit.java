@@ -85,6 +85,7 @@ public class ItemInit
 	public static final RegistryObject<Item> POWDER_SALTPETER = ITEMS.register("powder_saltpeter", () -> new Item(new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
 	
 	public static final RegistryObject<Item> BONE_FRAGMENT = ITEMS.register("bone_fragment", () -> new Item(new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
+	public static final RegistryObject<Item> BIT_O_SlIME = ITEMS.register("bit_o_slime", () -> new Item(new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> PEARL_FRAGMENT = ITEMS.register("pearl_fragment", () -> new Item(new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> SMALL_BLAZE_POWDER = ITEMS.register("small_blaze_powder", () -> new Item(new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
 	public static final RegistryObject<Item> NETHER_STAR_FRAGMENT = ITEMS.register("nether_star_fragment", () -> new Item(new Item.Properties().tab(ResourcefulTools.resourceful_tools)));
