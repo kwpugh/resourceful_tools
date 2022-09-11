@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'idea'
 apply plugin: 'maven-publish'
 
-version = '1.5.8'
+version = '1.5.9'
 group = 'com.kwpugh.resourceful_tools' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'ResourcefulTools-Forge-1.19.2'
 
